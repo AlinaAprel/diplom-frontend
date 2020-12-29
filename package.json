@@ -1,0 +1,29 @@
+{
+  "name": "diplom-frontend",
+  "version": "1.0.0",
+  "description": "diplom frontend yandex",
+  "main": "index.html",
+  "scripts": {
+    "start": "node index.html",
+    "dev": "nodemon index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlinaAprel/diplom-frontend.git"
+  },
+  "keywords": [
+    "diplom",
+    "yandex",
+    "frontend"
+  ],
+  "author": "Alina Aprel <alina.aprelh@mail.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlinaAprel/diplom-frontend/issues"
+  },
+  "homepage": "https://github.com/AlinaAprel/diplom-frontend#readme",
+  "dependencies": {
+    "node": "^15.4.0",
+    "nodemon": "^2.0.6"
+  }
+}
