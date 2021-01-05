@@ -1,7 +1,7 @@
 # Dependency directory
 node_modules
 dist
-src
+
 
 # Optional npm cache directory
 .npm
