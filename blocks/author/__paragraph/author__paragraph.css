@@ -1,0 +1,13 @@
+@import url(/blocks/author/__paragraph/_second-text/author_second-text.css);
+
+.author__paragraph {
+  width: 600px;
+
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+}

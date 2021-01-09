@@ -1,0 +1,17 @@
+.header__rectangle {
+  width: 176px;
+
+  position: absolute;
+  top: 19px;
+  bottom: 13px;
+  right: 100px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  padding: 11.88px 12px 15.12px 12px;
+
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+}

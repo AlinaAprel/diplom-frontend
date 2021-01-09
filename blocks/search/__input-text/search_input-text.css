@@ -1,0 +1,16 @@
+.search__input-text {
+  position: absolute;
+  top: 21px;
+  left: 24px;
+
+  width: 376px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+
+  border: none;
+}

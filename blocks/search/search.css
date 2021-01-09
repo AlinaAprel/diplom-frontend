@@ -1,0 +1,13 @@
+@import url(/blocks/search/__image/search__image.css);
+@import url(/blocks/search/__form/search__form.css);
+@import url(/blocks/search/__input-button/search_input-button.css);
+@import url(/blocks/search/__input-text/search_input-text.css);
+@import url(/blocks/search/__paragraph/search__paragraph.css);
+@import url(/blocks/search/__text/search__text.css);
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

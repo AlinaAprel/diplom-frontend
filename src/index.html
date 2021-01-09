@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Webpack</title>
-    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Alina Aprel">
+  <title>NewsExplorer</title>
+  <link rel="icon" type="image/png" href="">
+	<link rel="stylesheet" href="../vendor/normalize.css">
+  <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <h1>Hello</h1>
-    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+    <header class="header">
+      <a class="header__explorer" href="#">NewsExplorer</a>
+      <a class="header__main" href="#">Главная</a>
+      <a class="header__autorization" href="#">Авторизоваться</a>
+      <div class="header__rectangle"></div>
+      <div class="header__vector"></div>
+    </header>
+
+    <container class="search">
+      <img class="search__image" src="../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png" alt="Телефон">
+      <h1 class="search__text">Что творится в мире?</h1>
+      <p class="search__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+      <form class="search__form">
+        <input class="search__input-text" type="text" value="Введите тему новости">
+        <input class="search__input-button" type="button" value="Искать">
+      </form>
+    </container>
+
+    <container class="author">
+      <img class="author__avatar" alt="Фотография автора" src="../images/author-photo.png">
+        <text class="author__text">
+          <h2 class="author__header">Об авторе</h2>
+          <p class="author__paragraph"> Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+          чем вы занимаетесь, какими технологиями разработки владеете.</p>
+          <p class="author__paragraph author_second-text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+          и чем можете помочь потенциальным заказчикам.</p>
+        </text>
+    </container>
+
+    <footer class="footer">
+      <p class="footer__text">© 2020 Supersite, Powered by News API</p>
+        <a class="footer__main">Главная</a>
+          <a class="footer__yandex">Яндекс.Практикум</a>
+            <a class="footer__github">
+              <img class="footer__github-image" alt="Github" src="../images/github.svg">
+            </a>
+          <a class="footer__facebook">
+            <img class="footer__facebook-image" alt="Facebook" src="../images/facebook.svg">
+          </a>
+    </footer>
+    <!-- <script src="<%= htmlWebpackPlugin.files.js %>"></script> -->
 </body>
 </html>

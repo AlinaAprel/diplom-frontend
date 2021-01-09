@@ -1,0 +1,18 @@
+@import url(/blocks/header/__autorization/header__autorization.css);
+@import url(/blocks/header/__explorer/header__explorer.css);
+@import url(/blocks/header/__main/header__main.css);
+@import url(/blocks/header/__rectangle/header__rectangle.css);
+@import url(/blocks/header/__vector/header__vector.css);
+
+.header {
+  max-width: 1440px;
+  height: 80px;
+
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+
+  position: relative;
+
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,15 @@
+.footer__yandex {
+  position: absolute;
+  top: 30px;
+  right: 216px;
+
+  width: 192px;
+
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
