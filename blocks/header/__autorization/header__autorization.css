@@ -1,10 +1,7 @@
 .header__autorization {
-  max-width: 152px;
+  width: 152px;
 
-  position: absolute;
-  top: 30.87px;
-  bottom: 28.12px;
-  right: 116px;
+  position: relative;
 
   font-family: Roboto;
   font-size: 18px;

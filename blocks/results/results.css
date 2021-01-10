@@ -1,0 +1,11 @@
+@import url(/blocks/results/__header/results__header.css);
+@import url(/blocks/results/__text/results__text.css);
+@import url(/blocks/results/__theme/results__theme.css);
+@import url(/blocks/results/__span/results__span.css);
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 104px;
+}

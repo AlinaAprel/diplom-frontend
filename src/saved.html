@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Alina Aprel">
+  <title>NewsExplorer</title>
+  <link rel="icon" type="image/png" href="../images/favicon.svg">
+	<link rel="stylesheet" href="../vendor/normalize.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+    <p class="header__explorer">NewsExplorer</p>
+      <nav class="header__nav">
+            <a class="header__main header__main_active" href="#">Главная</a>
+            <!-- Чтобы скрыть поле "Сохраненные статьи" - поставьте класс disabled -->
+            <p class="header__saved">Сохранённые статьи</p>
+            <!-- Чтобы скрыть поле "Авторизоваться" - поставьте класс disabled -->
+          <div class="header__rectangle">
+            <a class="header__autorization" href="#">Авторизоваться</a>
+          </div>
+          <!-- Чтобы скрыть поле "Грета" - поставьте класс disabled -->
+          <div class="header__greta disabled">
+            <a class="header__greta-link">Грета</a>
+              <img class="header__greta-img" alt="Вход" src="../images/logout.svg">
+          </div>
+      </nav>
+  </header>
+
+  <container class="results">
+    <p class="results__text">Сохранённые статьи</p>
+    <h1 class="results__header">Грета, у вас 5 сохранённых статей</h1>
+    <p class="results__theme">По ключевым словам:
+      <span class="results__span">Природа, Тайга</span> и
+       <span class="results__span">2-м другим</span>
+    </p>
+  </container>
+
+  <container class="saved-cards">
+    <div class="saved-cards__container">
+      <img class="saved-cards__image" alt="Цветок" src="../images/flower-one.png">
+      <p class="saved-cards__time">2 августа, 2019</p>
+      <h2 class="saved-cards__header">Национальное достояние – парки</h2>
+      <p class="saved-cards__text">В 2016 году Америка отмечала важный юбилей:
+        сто лет назад здесь начала складываться система национальных парков –
+       охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+      <p class="saved-cards__author">Дзен</p>
+    </div>
+
+    <div class="saved-cards__container">
+      <img class="saved-cards__image" alt="Цветок" src="../images/flower-one.png">
+      <p class="saved-cards__time">2 августа, 2019</p>
+      <h2 class="saved-cards__header">Национальное достояние – парки</h2>
+      <p class="saved-cards__text">В 2016 году Америка отмечала важный юбилей:
+        сто лет назад здесь начала складываться система национальных парков –
+       охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+      <p class="saved-cards__author">Дзен</p>
+    </div>
+
+    <div class="saved-cards__container">
+      <img class="saved-cards__image" alt="Цветок" src="../images/flower-one.png">
+      <p class="saved-cards__time">2 августа, 2019</p>
+      <h2 class="saved-cards__header">Национальное достояние – парки</h2>
+      <p class="saved-cards__text">В 2016 году Америка отмечала важный юбилей:
+        сто лет назад здесь начала складываться система национальных парков –
+       охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+      <p class="saved-cards__author">Дзен</p>
+    </div>
+  </container>
+
+
+</body>

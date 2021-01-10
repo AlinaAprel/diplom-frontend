@@ -6,17 +6,28 @@
   <meta name="description" content="">
   <meta name="author" content="Alina Aprel">
   <title>NewsExplorer</title>
-  <link rel="icon" type="image/png" href="">
+  <link rel="icon" type="image/png" href="../images/favicon.svg">
 	<link rel="stylesheet" href="../vendor/normalize.css">
   <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+  <!-- Для того, чтобы скрыть какое-либо поле меню - нужно поставить класс disabled -->
     <header class="header">
-      <a class="header__explorer" href="#">NewsExplorer</a>
-      <a class="header__main" href="#">Главная</a>
-      <a class="header__autorization" href="#">Авторизоваться</a>
-      <div class="header__rectangle"></div>
-      <div class="header__vector"></div>
+        <p class="header__explorer">NewsExplorer</p>
+          <nav class="header__nav">
+                <a class="header__main header__main_active" href="#">Главная</a>
+                <!-- Чтобы скрыть поле "Сохраненные статьи" - поставьте класс disabled -->
+                <a class="header__saved" href="src/saved.html">Сохранённые статьи</a>
+                <!-- Чтобы скрыть поле "Авторизоваться" - поставьте класс disabled -->
+              <div class="header__rectangle">
+                <a class="header__autorization" href="#">Авторизоваться</a>
+              </div>
+              <!-- Чтобы скрыть поле "Грета" - поставьте класс disabled -->
+              <div class="header__greta disabled">
+                <a class="header__greta-link">Грета</a>
+                  <img class="header__greta-img" alt="Вход" src="../images/logout.svg">
+              </div>
+          </nav>
     </header>
 
     <container class="search">
@@ -29,13 +40,26 @@
       </form>
     </container>
 
+    <!-- Для того, чтобы убрать блок "preloader" - поставьте класс disabled -->
+    <container class="preloader">
+        <i class="preloader__circle"></i>
+        <p class="preloader__text">Идет поиск новостей...</p>
+    </container>
+    <!-- Для того, чтобы убрать блок "result" - поставьте класс disabled -->
+    <container class="result">
+      <img class="result__image" alt="Лупа" src="../images/not-found.svg">
+      <h2 class="result__header">Ничего не найдено</h2>
+      <p class="result_text">К сожалению по вашему запросу
+        ничего не найдено.</p>
+    </container>
+
     <container class="author">
       <img class="author__avatar" alt="Фотография автора" src="../images/author-photo.png">
         <text class="author__text">
           <h2 class="author__header">Об авторе</h2>
           <p class="author__paragraph"> Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
           чем вы занимаетесь, какими технологиями разработки владеете.</p>
-          <p class="author__paragraph author_second-text">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+          <p class="author__paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
           и чем можете помочь потенциальным заказчикам.</p>
         </text>
     </container>

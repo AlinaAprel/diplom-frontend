@@ -2,8 +2,12 @@
 @import url(/blocks/header/__explorer/header__explorer.css);
 @import url(/blocks/header/__main/header__main.css);
 @import url(/blocks/header/__rectangle/header__rectangle.css);
-@import url(/blocks/header/__vector/header__vector.css);
-
+@import url(/blocks/header/__main/_active/header__main_active.css);
+@import url(/blocks/header/__nav/header__nav.css);
+@import url(/blocks/header/__saved/header__saved.css);
+@import url(/blocks/header/__greta-img/header__greta-img.css);
+@import url(/blocks/header/__greta-link/header__greta-link.css);
+@import url(/blocks/header/__greta/header__greta.css);
 .header {
   max-width: 1440px;
   height: 80px;
@@ -11,7 +15,8 @@
   background: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 
-  position: relative;
+  display: flex;
+  justify-content: space-between;
 
   background: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);

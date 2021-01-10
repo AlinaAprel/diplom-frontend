@@ -1,0 +1,15 @@
+.saved-cards__author {
+  width: 352px;
+  margin: 0px 24px 24px 24px;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  color: #B6BCBF;
+}

@@ -1,0 +1,12 @@
+.header__greta {
+  display: flex;
+  flex-direction: row;
+
+  width: 112px;
+  height: 48px;
+  margin: 19px 104px 13px 32px;
+
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+}

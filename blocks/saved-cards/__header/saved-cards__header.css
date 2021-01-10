@@ -1,0 +1,12 @@
+.saved-cards__header {
+  width: 352px;
+  margin: 0px 24px 16px 24px;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+
+  color: #1A1B22;
+}

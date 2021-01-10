@@ -1,0 +1,10 @@
+.saved-cards__container {
+  width: 400px;
+  height: 576px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: #ffffff;
+}
