@@ -1,0 +1,8 @@
+.saved-cards__list {
+  margin: 62px 102px 62px 102px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 400px);
+  grid-gap: 16px 16px;
+  justify-content: center;
+}

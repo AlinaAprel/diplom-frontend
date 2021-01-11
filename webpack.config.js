@@ -38,10 +38,10 @@ module.exports = {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
         use: [
                  {
-                     loader: 'file-loader?name=./assets/fonts/webfonts/[name].[ext]'
+                     loader: 'file-loader?name=./assets/vendor/fonts/webfonts/[name].[ext]'
                  },
                  {
-                     loader: 'file-loader?name=./assets/fonts/Roboto/[name].[ext]'
+                     loader: 'file-loader?name=./assets/vendor/fonts/Roboto/[name].[ext]'
                  }
              ]
     },

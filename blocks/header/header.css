@@ -6,8 +6,11 @@
 @import url(/blocks/header/__nav/header__nav.css);
 @import url(/blocks/header/__saved/header__saved.css);
 @import url(/blocks/header/__greta-img/header__greta-img.css);
+@import url(/blocks/header/__greta-img/_dark/header__greta-img_dark.css);
 @import url(/blocks/header/__greta-link/header__greta-link.css);
 @import url(/blocks/header/__greta/header__greta.css);
+@import url(/blocks/header/__greta/_dark/header__greta_dark.css);
+
 .header {
   max-width: 1440px;
   height: 80px;
@@ -20,4 +23,24 @@
 
   background: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.header__theme-text_dark {
+  color: #1a1b22;
+}
+
+.header__theme_dark {
+  box-shadow: 0px -1px 0px 0px #d1d2d6 inset;
+}
+
+.header__active_light {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 23px;
+  margin-right: 0px;
+}
+
+.header__active_dark {
+  border-bottom: 3px solid #1a1b22;
+  padding-bottom: 47px;
+  margin-right: 0px;
 }

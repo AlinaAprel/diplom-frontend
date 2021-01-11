@@ -7,15 +7,14 @@
   <meta name="author" content="Alina Aprel">
   <title>NewsExplorer</title>
   <link rel="icon" type="image/png" href="../images/favicon.svg">
-	<link rel="stylesheet" href="../vendor/normalize.css">
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <!-- Для того, чтобы скрыть какое-либо поле меню - нужно поставить класс disabled -->
     <header class="header">
         <p class="header__explorer">NewsExplorer</p>
           <nav class="header__nav">
-                <a class="header__main header__main_active" href="#">Главная</a>
+                <p class="header__main header__active_light">Главная</p>
                 <!-- Чтобы скрыть поле "Сохраненные статьи" - поставьте класс disabled -->
                 <a class="header__saved" href="src/saved.html">Сохранённые статьи</a>
                 <!-- Чтобы скрыть поле "Авторизоваться" - поставьте класс disabled -->

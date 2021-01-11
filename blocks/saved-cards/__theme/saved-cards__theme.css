@@ -1,0 +1,23 @@
+.saved-cards__theme {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+
+  padding: 8px 12px 8px 12px;
+
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+
+  text-align: center;
+
+  color: #000000;
+
+  cursor: pointer;
+}
