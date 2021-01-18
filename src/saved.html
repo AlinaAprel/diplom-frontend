@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Alina Aprel">
-  <title>NewsExplorer</title>
-  <link rel="icon" type="image/png" href="../images/favicon.svg">
-  <link rel="stylesheet" href="style.css">
-</head>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="Alina Aprel">
+    <title>NewsExplorer</title>
+    <link rel="icon" type="image/x-icon" href="<%=('../images/favicon.svg')%>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  </head>
 <body>
-  <header class="header header__theme_dark">
+
+  <!-- Для того, чтобы убрать header - поставьте класс disabled -->
+  <header class="header">
+    <p class="header__explorer header__theme-text_light">NewsExplorer</p>
+      <nav class="header__nav">
+            <a class="header__main header__theme-text_light" type="text/css" href="index.html">Главная</a>
+            <a class="header__saved header__active_light header__theme-text_light">Сохранённые статьи</a>
+          <div class="header__greta_light">
+            <a class="header__greta-link header__theme-text_light">Грета</a>
+              <img class="header__greta-img_light" alt="Вход" src="<%=('../images/greta-dark.svg')%>">
+          </div>
+      </nav>
+  </header>
+
+  <!-- Для того, чтобы убрать header-dark - поставьте класс disabled -->
+  <header class="header-dark">
     <p class="header__explorer header__theme-text_dark">NewsExplorer</p>
       <nav class="header__nav">
-            <a class="header__main header__theme-text_dark" href="index.html">Главная</a>
-            <!-- Чтобы скрыть поле "Сохраненные статьи" - поставьте класс disabled -->
-            <a class="header__saved header__active_dark header__theme-text_dark">Сохранённые статьи</a>
-            <!-- Чтобы скрыть поле "Авторизоваться" - поставьте класс disabled -->
-          <div class="header__rectangle header__theme-text_dark disabled">
+            <a class="header__main header__theme-text_dark header__active_dark" type="text/css" href="index.html">Главная</a>
+          <div class="header__rectangle header__theme-text_dark">
             <a class="header__autorization" href="#">Авторизоваться</a>
-          </div>
-          <!-- Чтобы скрыть поле "Грета" - поставьте класс disabled -->
-          <div class="header__greta_dark">
-            <a class="header__greta-link header__theme-text_dark">Грета</a>
-              <img class="header__greta-img_dark" alt="Вход" src="../images/greta-dark.svg">
           </div>
       </nav>
   </header>
@@ -43,9 +50,9 @@
       <div class="saved-cards__container">
           <button class="saved-cards__theme">Природа</button>
           <button class="saved-cards__delete">
-            <img class="saved-cards__delete-img" alt="Корзина" src="../images/trash.svg">
+            <img class="saved-cards__delete-img" alt="Корзина" src="<%=('../images/trash.svg')%>">
           </button>
-        <img class="saved-cards__image" alt="Цветок" src="../images/flower-one.png">
+        <img class="saved-cards__image" alt="Цветок" src="<%=('../images/flower-one.png')%>">
         <p class="saved-cards__time">2 августа, 2019</p>
         <h2 class="saved-cards__header">Национальное достояние – парки</h2>
         <p class="saved-cards__text">В 2016 году Америка отмечала важный юбилей:
@@ -56,10 +63,10 @@
 
       <div class="saved-cards__container">
           <button class="saved-cards__theme">Природа</button>
-        <img class="saved-cards__image" alt="Цветок" src="../images/way.png">
+        <img class="saved-cards__image" alt="Цветок" src="<%=('../images/way.png')%>">
         <button class="saved-cards__statement">Убрать из сохранённых</button>
         <button class="saved-cards__delete">
-          <img class="saved-cards__delete-img" alt="Корзина" src="../images/trash-dark.svg">
+          <img class="saved-cards__delete-img" alt="Корзина" src="<%=('../images/trash-dark.svg')%>">
         </button>
         <p class="saved-cards__time">2 августа, 2019</p>
         <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
@@ -71,9 +78,9 @@
 
       <div class="saved-cards__container">
           <button class="saved-cards__theme">Тайга</button>
-        <img class="saved-cards__image" alt="Цветок" src="../images/flower-second.png">
+        <img class="saved-cards__image" alt="Цветок" src="<%=('../images/flower-second.png')%>">
         <button class="saved-cards__delete">
-          <img class="saved-cards__delete-img" alt="Корзина" src="../images/trash.svg">
+          <img class="saved-cards__delete-img" alt="Корзина" src="<%=('../images/trash.svg')%>">
         </button>
         <p class="saved-cards__time">2 августа, 2019</p>
         <h2 class="saved-cards__header">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
@@ -85,9 +92,9 @@
 
       <div class="saved-cards__container">
           <button class="saved-cards__theme">Парки</button>
-        <img class="saved-cards__image" alt="Цветок" src="../images/flower-one.png">
+        <img class="saved-cards__image" alt="Цветок" src="<%=('../images/flower-one.png')%>">
         <button class="saved-cards__delete">
-          <img class="saved-cards__delete-img" alt="Корзина" src="../images/trash.svg">
+          <img class="saved-cards__delete-img" alt="Корзина" src="<%=('../images/trash.svg')%>">
         </button>
         <p class="saved-cards__time">2 августа, 2019</p>
         <h2 class="saved-cards__header">Национальное достояние – парки</h2>
@@ -99,9 +106,9 @@
 
       <div class="saved-cards__container">
           <button class="saved-cards__theme">Фотография</button>
-        <img class="saved-cards__image" alt="Цветок" src="../images/way.png">
+        <img class="saved-cards__image" alt="Цветок" src="<%=('../images/way.png')%>">
         <button class="saved-cards__delete">
-          <img class="saved-cards__delete-img" alt="Корзина" src="../images/trash.svg">
+          <img class="saved-cards__delete-img" alt="Корзина" src="<%=('../images/trash.svg')%>">
         </button>
         <p class="saved-cards__time">2 августа, 2019</p>
         <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
@@ -118,10 +125,10 @@
       <a class="footer__main">Главная</a>
         <a class="footer__yandex">Яндекс.Практикум</a>
           <a class="footer__github">
-            <img class="footer__github-image" alt="Github" src="../images/github.svg">
+            <img class="footer__github-image" alt="Github" src="<%=('../images/github.svg')%>">
           </a>
         <a class="footer__facebook">
-          <img class="footer__facebook-image" alt="Facebook" src="../images/facebook.svg">
+          <img class="footer__facebook-image" alt="Facebook" src="<%=('../images/facebook.svg')%>">
         </a>
   </footer>
 

@@ -1,0 +1,50 @@
+.saved-cards__button {
+  width: 228px;
+  height: 64px;
+
+  grid-column-start: 2;
+  margin: 64px 86px 0px 86px;
+
+  background: #ffffff;
+  border-radius: 80px;
+  border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #1a1b22;
+
+  cursor: pointer;
+}
+
+.saved-cards__button:hover {
+  opacity: 0.9;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .saved-cards__button {
+    width: 224px;
+    height: 56px;
+
+    margin: 22px 0px 40px 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  .saved-cards__button {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .saved-cards__button {
+    width: 288px;
+    height: 56px;
+
+    margin: 15px 16px 10px 0px;
+  }
+}

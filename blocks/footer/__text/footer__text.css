@@ -14,3 +14,20 @@
 
   color: #b6bcbf;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__text {
+    top: 24px;
+    left: 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__text {
+    bottom: 20px;
+    right: 16px;
+    top: unset;
+    left: unset;
+    width: 288px;
+  }
+}

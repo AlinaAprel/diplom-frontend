@@ -1,0 +1,12 @@
+.popup__text-email {
+  max-width: 139px;
+  margin-top: 22px;
+
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #2F71E5;
+}

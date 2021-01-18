@@ -1,3 +1,4 @@
+/* Класс для главной страницы */
 .header__greta {
   display: flex;
   flex-direction: row;
@@ -9,4 +10,12 @@
   border: 1px solid #ffffff;
   box-sizing: border-box;
   border-radius: 100px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__greta {
+    width: 100px;
+    height: 40px;
+    margin: 18px 40px 8px 16px;
+  }
 }

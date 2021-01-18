@@ -11,3 +11,16 @@
 
   color: #ffffff;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__explorer {
+    margin: 22.73px 0px 18.46px 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header__explorer {
+    margin: 20px 0px 24px 20px;
+    font-size: 15px;
+  }
+}

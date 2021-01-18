@@ -3,20 +3,21 @@
 <head>
 	<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="">
   <meta name="author" content="Alina Aprel">
   <title>NewsExplorer</title>
-  <link rel="icon" type="image/png" href="../images/favicon.svg">
-  <link rel="stylesheet" href="src/style.css">
+  <link rel="icon" type="image/x-icon" href="<%=('../images/favicon.svg')%>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
   <!-- Для того, чтобы скрыть какое-либо поле меню - нужно поставить класс disabled -->
     <header class="header">
         <p class="header__explorer">NewsExplorer</p>
           <nav class="header__nav">
-                <p class="header__main header__active_light">Главная</p>
+                <p class="header__main header__active">Главная</p>
                 <!-- Чтобы скрыть поле "Сохраненные статьи" - поставьте класс disabled -->
-                <a class="header__saved" href="src/saved.html">Сохранённые статьи</a>
+                <a class="header__saved" href="saved.html">Сохранённые статьи</a>
                 <!-- Чтобы скрыть поле "Авторизоваться" - поставьте класс disabled -->
               <div class="header__rectangle">
                 <a class="header__autorization" href="#">Авторизоваться</a>
@@ -24,19 +25,91 @@
               <!-- Чтобы скрыть поле "Грета" - поставьте класс disabled -->
               <div class="header__greta disabled">
                 <a class="header__greta-link">Грета</a>
-                  <img class="header__greta-img" alt="Вход" src="../images/logout.svg">
+                  <img class="header__greta-img" alt="Вход" src="<%=('../images/logout.svg')%>">
               </div>
           </nav>
     </header>
 
+  <!-- Для того, чтобы скрыть меню - нужно поставить класс disabled -->
+    <header class="header disabled">
+      <p class="header__explorer">NewsExplorer</p>
+        <nav class="header__nav">
+            <img class="header__mobile" alt="Меню" src="../images/menu.svg">
+        </nav>
+    </header>
+
+    <header class="header-mobile disabled">
+      <div class="header-mobile__container">
+        <div class="header-mobile__top">
+          <p class="header-mobile__explorer">NewsExplorer</p>
+          <img class="header-mobile__image" alt="Закрыть" src="../images/close.svg">
+        </div>
+        <div class="header-mobile__menu">
+          <a class="header-mobile__main">Главная</a>
+          <a class="header-mobile__saved">Сохраненные статьи</a>
+          <div class="header-mobile__authorization">
+            <a class="header-mobile__authorization-link">Авторизоваться</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <container class="search">
-      <img class="search__image" src="../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png" alt="Телефон">
+      <img class="search__image" src="<%=('../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png')%>" alt="Телефон">
       <h1 class="search__text">Что творится в мире?</h1>
       <p class="search__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
       <form class="search__form">
         <input class="search__input-text" type="text" value="Введите тему новости">
-        <input class="search__input-button" type="button" value="Искать">
+        <button class="search__input-button" type="button">Искать</button>
       </form>
+      <button class="search__button" type="button">Искать</button>
+    </container>
+
+
+    <container class="saved-cards">
+      <h3 class="saved-cards__title">Результаты поиска</h3>
+      <div class="saved-cards__list">
+        <div class="saved-cards__container">
+            <button class="saved-cards__save">
+              <img class="saved-cards__save-img" alt="Сохранить" src="<%=('../images/save.svg')%>">
+            </button>
+          <img class="saved-cards__image" alt="Цветок" src="<%=('../images/flower-one.png')%>">
+          <p class="saved-cards__time">2 августа, 2019</p>
+          <h2 class="saved-cards__header">Национальное достояние – парки</h2>
+          <p class="saved-cards__text">В 2016 году Америка отмечала важный юбилей:
+            сто лет назад здесь начала складываться система национальных парков –
+          охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
+          <p class="saved-cards__author">Дзен</p>
+        </div>
+
+        <div class="saved-cards__container">
+          <img class="saved-cards__image" alt="Цветок" src="<%=('../images/way.png')%>">
+          <button class="saved-cards__save">
+            <img class="saved-cards__save-img" alt="Сохранить" src="<%=('../images/saved.svg')%>">
+          </button>
+          <p class="saved-cards__time">2 августа, 2019</p>
+          <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
+          <p class="saved-cards__text">Фотограф отвлеклась от освещения суровой политической
+             реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+            из местных чудес природы.</p>
+          <p class="saved-cards__author">Афиша</p>
+        </div>
+
+        <div class="saved-cards__container">
+          <img class="saved-cards__image" alt="Цветок" src="<%=('../images/flower-second.png')%>">
+          <button class="saved-cards__statement">Войдите, чтобы сохранять статьи</button>
+          <button class="saved-cards__save">
+            <img class="saved-cards__save-img" alt="Сохранить" src="<%=('../images/save-dark.svg')%>">
+          </button>
+          <p class="saved-cards__time">2 августа, 2019</p>
+          <h2 class="saved-cards__header">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
+          <p class="saved-cards__text">Знаменитый фотограф снимает первозданные леса России, чтобы
+             рассказать о необходимости их сохранения. В этот раз он отправился
+              в Двинско-Пинежскую тайгу, где...</p>
+          <p class="saved-cards__author">Медиазона</p>
+        </div>
+        <button class="saved-cards__button">Показать еще</button>
+      </div>
     </container>
 
     <!-- Для того, чтобы убрать блок "preloader" - поставьте класс disabled -->
@@ -46,14 +119,14 @@
     </container>
     <!-- Для того, чтобы убрать блок "result" - поставьте класс disabled -->
     <container class="result">
-      <img class="result__image" alt="Лупа" src="../images/not-found.svg">
+      <img class="result__image" alt="Лупа" src="<%=('../images/not-found.svg')%>">
       <h2 class="result__header">Ничего не найдено</h2>
       <p class="result_text">К сожалению по вашему запросу
         ничего не найдено.</p>
     </container>
 
     <container class="author">
-      <img class="author__avatar" alt="Фотография автора" src="../images/author-photo.png">
+      <img class="author__avatar" alt="Фотография автора" src="<%=('../images/author-photo.png')%>">
         <text class="author__text">
           <h2 class="author__header">Об авторе</h2>
           <p class="author__paragraph"> Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
@@ -68,12 +141,103 @@
         <a class="footer__main">Главная</a>
           <a class="footer__yandex">Яндекс.Практикум</a>
             <a class="footer__github">
-              <img class="footer__github-image" alt="Github" src="../images/github.svg">
+              <img class="footer__github-image" alt="Github" src="<%=('../images/github.svg')%>">
             </a>
           <a class="footer__facebook">
-            <img class="footer__facebook-image" alt="Facebook" src="../images/facebook.svg">
+            <img class="footer__facebook-image" alt="Facebook" src="<%=('../images/facebook.svg')%>">
           </a>
     </footer>
+
+
+    <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
+    <container class="popup popup_is-opened disabled">
+      <div class="popup__content">
+        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Вход</h3>
+            <form class="popup__form" name="log">
+              <p class="popup__text">Email</p>
+                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                  <p class="popup__text">Пароль</p>
+                <input type="text" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+              <button class="popup__button">Войти</button>
+                <p class="popup__paragraph">или
+                  <a class="popup__link">Зарегистрироваться</a>
+                </p>
+            </form>
+      </div>
+    </container>
+
+    <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
+    <container class="popup popup_is-opened disabled">
+      <div class="popup__content">
+        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Вход</h3>
+            <form class="popup__form" name="log">
+              <p class="popup__text-email">Email</p>
+                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                  <p class="popup__text-parol">Пароль</p>
+                <input type="password" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
+              <button class="popup__button">Войти</button>
+                <p class="popup__paragraph">или
+                  <a class="popup__link">Зарегистрироваться</a>
+                </p>
+            </form>
+      </div>
+    </container>
+
+    <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
+    <container class="popup popup_is-opened disabled">
+      <div class="popup__content">
+        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Вход</h3>
+            <form class="popup__form" name="log">
+              <p class="popup__text-email">Email</p>
+                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <p class="popup__error_log">Неправильный формат email</p>
+                  <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
+                  <p class="popup__text-parol margin-null">Пароль</p>
+                <input type="password" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
+              <button class="popup__button popup__button_active">Войти</button>
+                <p class="popup__paragraph">или
+                  <a class="popup__link">Зарегистрироваться</a>
+                </p>
+            </form>
+      </div>
+    </container>
+
+ <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
+    <container class="popup popup_is-opened disabled">
+      <div class="popup__content">
+        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
+          <h3 class="popup__title">Регистрация</h3>
+            <form class="popup__form" name="log">
+              <p class="popup__text-email">Email</p>
+                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                  <p class="popup__text-parol">Пароль</p>
+                <input type="password" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <p class="popup__text-name">Имя</p>
+                <input type="text" name="name" id="input-name" class="popup__input popup__input_type_name" placeholder="Введите своё имя" required>
+                <p class="popup__error_sign">Такой пользователь уже есть</p>
+                <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
+                <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
+              <button class="popup__button margin-null">Зарегистрироваться</button>
+                <p class="popup__paragraph">или
+                  <a class="popup__link">Войти</a>
+                </p>
+            </form>
+      </div>
+    </container>
+
+   <!-- Для того, чтобы убрать блок "signup" - поставьте класс disabled -->
+    <container class="signup popup_is-opened disabled">
+      <div class="signup__container">
+        <img class="signup__close" alt="" src="<%=('../images/close.svg')%>">
+        <h4 class="signup__header">Пользователь успешно зарегистрирован!</h4>
+        <p class="signup__log">Войти</p>
+      </div>
+    </container>
     <!-- <script src="<%= htmlWebpackPlugin.files.js %>"></script> -->
 </body>
 </html>

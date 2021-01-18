@@ -1,6 +1,13 @@
+/* Кнопка с главной страницы */
 .header__greta-img {
   width: 24px;
   height: 24px;
 
   padding-top: 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__greta-img {
+    padding-top: 8px;
+  }
 }

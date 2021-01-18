@@ -1,0 +1,8 @@
+/* Кнопка на странице "Сохраненные фотографии" */
+.header__greta-img_light {
+  width: 20px;
+  height: 20px;
+
+  padding-top: 14px;
+  margin-left: 2px;
+}

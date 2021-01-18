@@ -13,3 +13,10 @@
 
   cursor: pointer;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .saved-cards__delete {
+    top: 8px;
+    right: 8px;
+  }
+}

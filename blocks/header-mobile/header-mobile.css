@@ -1,0 +1,27 @@
+@import url(/blocks/header-mobile/__authorization-link/header-mobile__authorization-link.css);
+@import url(/blocks/header-mobile/__authorization/header-mobile__authorization.css);
+@import url(/blocks/header-mobile/__explorer/header-mobile__explorer.css);
+@import url(/blocks/header-mobile/__image/header-mobile__image.css);
+@import url(/blocks/header-mobile/__main/header-mobile__main.css);
+@import url(/blocks/header-mobile/__menu/header-mobile__menu.css);
+@import url(/blocks/header-mobile/__saved/header-mobile__saved.css);
+@import url(/blocks/header-mobile/__top/header-mobile__top.css);
+@import url(/blocks/header-mobile/__container/header-mobile__container.css);
+
+.header-mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+
+  z-index: 2;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .header-mobile {
+    display: flex;
+  }
+}

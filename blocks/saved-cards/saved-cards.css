@@ -10,6 +10,11 @@
 @import url(/blocks/saved-cards/__delete-img/saved-cards__delete-img.css);
 @import url(/blocks/saved-cards/__statement/saved-cards__statement.css);
 
+@import url(/blocks/saved-cards/__title/saved-cards__title.css);
+@import url(/blocks/saved-cards/__button/saved-cards__button.css);
+@import url(/blocks/saved-cards/__save-img/saved-cards__save-img.css);
+@import url(/blocks/saved-cards/__save/saved-cards__save.css);
+
 
 .saved-cards {
   display: grid;

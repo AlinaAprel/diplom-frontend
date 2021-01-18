@@ -26,25 +26,12 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
-        use: [
-                'file-loader?name=../images/[name].[ext]',
-                {
-                        loader: 'image-webpack-loader',
-                        options: {}
-                },
-        ]
+        use: ['image-webpack-loader']
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        use: [
-                 {
-                     loader: 'file-loader?name=./assets/vendor/fonts/webfonts/[name].[ext]'
-                 },
-                 {
-                     loader: 'file-loader?name=./assets/vendor/fonts/Roboto/[name].[ext]'
-                 }
-             ]
-    },
+        use: ['file-loader']
+      },
     ]
   },
   plugins: [
@@ -52,9 +39,14 @@ module.exports = {
       filename: 'style.[contenthash].css',
     }),
     new HtmlWebpackPlugin({
-      inject: false,
       template: './src/index.html',
+      inject: 'body',
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/saved.html',
+      inject: 'body',
+      filename: 'saved.html'
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

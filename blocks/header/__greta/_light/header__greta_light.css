@@ -1,4 +1,5 @@
-.header__greta_dark {
+/* Класс для меню на странице "Сохраненные фотографии" */
+.header__greta_light {
     display: flex;
     flex-direction: row;
 

@@ -1,6 +1,7 @@
 .search__image {
   height: 576px;
-  width: 1440px;
+  width: 100vw;
+  object-fit: cover;
 
   position: absolute;
   left: 0px;

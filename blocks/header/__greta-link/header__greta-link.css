@@ -9,3 +9,12 @@
 
   color: #ffffff;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__greta-link {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin: 8px 2px 8px 15px;
+  }
+}
