@@ -25,12 +25,22 @@ module.exports = {
         use:  [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.(png|jpg|gif|ico|svg)$/,
-        use: ['image-webpack-loader']
+        test: /\.(png|jpg|gif|ico|svg)$/i,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './images/[name].[ext]'
+          }
+        }
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)$/,
-        use: ['file-loader']
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: './vendor/fonts/[name].[ext]'
+          }
+        }
       },
     ]
   },
