@@ -28,7 +28,7 @@
   </header>
 
   <!-- Без класса disabled меню исчезает, если ширина меньше 768px -->
-  <header class="header-dark">
+  <header class="header-dark disabled">
     <p class="header__explorer header__theme-text_dark">NewsExplorer</p>
       <nav class="header__nav">
             <a class="header__main header__theme-text_dark header__active_dark" type="text/css" href="index.html">Главная</a>
@@ -56,16 +56,16 @@
     </div>
   </header>
 
-  <container class="results">
+  <div class="results">
     <p class="results__text">Сохранённые статьи</p>
     <h1 class="results__header">Грета, у вас 5 сохранённых статей</h1>
     <p class="results__theme">По ключевым словам:
       <span class="results__span">Природа, Тайга</span> и
        <span class="results__span">2-м другим</span>
     </p>
-  </container>
+  </div>
 
-  <container class="saved-cards">
+  <div class="saved-cards">
     <div class="saved-cards__list">
       <div class="saved-cards__container">
           <button class="saved-cards__theme">Природа</button>
@@ -89,7 +89,7 @@
           <img class="saved-cards__delete-img" alt="Корзина" src="<%=('../images/trash-dark.svg')%>">
         </button>
         <p class="saved-cards__time">2 августа, 2019</p>
-        <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
+        <h2 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
         <p class="saved-cards__text">Фотограф отвлеклась от освещения суровой политической
            реальности Мексики, чтобы запечатлеть ускользающую красоту одного
           из местных чудес природы.</p>
@@ -131,14 +131,14 @@
           <img class="saved-cards__delete-img" alt="Корзина" src="<%=('../images/trash.svg')%>">
         </button>
         <p class="saved-cards__time">2 августа, 2019</p>
-        <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
+        <h2 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
         <p class="saved-cards__text">Фотограф отвлеклась от освещения суровой политической
            реальности Мексики, чтобы запечатлеть ускользающую красоту одного
           из местных чудес природы.</p>
         <p class="saved-cards__author">Афиша</p>
       </div>
     </div>
-  </container>
+  </div>
 
   <footer class="footer">
     <p class="footer__text">© 2020 Supersite, Powered by News API</p>

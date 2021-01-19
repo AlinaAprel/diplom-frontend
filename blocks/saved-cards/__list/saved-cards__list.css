@@ -18,8 +18,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .saved-cards__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px 16px 15px 16px;
+    grid-template-columns: repeat(auto-fill, 288px);
+    margin: 20px 16px 15px 16px;
   }
 }

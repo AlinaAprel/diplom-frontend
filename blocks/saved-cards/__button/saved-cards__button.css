@@ -48,3 +48,17 @@
     margin: 15px 16px 10px 0px;
   }
 }
+
+@media screen and (min-width: 624px) and (max-width: 767px) {
+  .saved-cards__button {
+    grid-row-start: 3;
+    grid-column-start: 1;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 623px) {
+  .saved-cards__button {
+    grid-row-start: 4;
+    grid-column-start: 1;
+  }
+}
