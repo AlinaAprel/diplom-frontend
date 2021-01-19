@@ -8,3 +8,13 @@
 
   cursor: pointer;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .signup__close {
+    width: 24px;
+    height: 24px;
+
+    top: -30px;
+    right: 5px;
+  }
+}

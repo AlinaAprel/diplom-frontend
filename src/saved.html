@@ -12,7 +12,9 @@
   </head>
 <body>
 
-  <!-- Для того, чтобы убрать header - поставьте класс disabled -->
+  <!-- Для того, чтобы скрыть какой-либо блок - поставьте класс disabled -->
+
+    <!-- Без класса disabled меню исчезает, если ширина меньше 768px -->
   <header class="header">
     <p class="header__explorer header__theme-text_light">NewsExplorer</p>
       <nav class="header__nav">
@@ -25,7 +27,7 @@
       </nav>
   </header>
 
-  <!-- Для того, чтобы убрать header-dark - поставьте класс disabled -->
+  <!-- Без класса disabled меню исчезает, если ширина меньше 768px -->
   <header class="header-dark">
     <p class="header__explorer header__theme-text_dark">NewsExplorer</p>
       <nav class="header__nav">
@@ -34,6 +36,24 @@
             <a class="header__autorization" href="#">Авторизоваться</a>
           </div>
       </nav>
+  </header>
+
+      <!-- Для того чтобы увидеть меню header-mobile - уберите класс disabled -->
+    <!-- Без класса disabled меню появляется на ширине 320px и исчезает на 768px  -->
+  <header class="header-mobile disabled">
+    <div class="header-mobile__container">
+      <div class="header-mobile__top">
+        <p class="header-mobile__explorer">NewsExplorer</p>
+        <img class="header-mobile__image" alt="Закрыть" src="../images/close.svg">
+      </div>
+      <div class="header-mobile__menu">
+        <a class="header-mobile__main">Главная</a>
+        <a class="header-mobile__saved">Сохраненные статьи</a>
+        <div class="header-mobile__authorization">
+          <a class="header-mobile__authorization-link">Авторизоваться</a>
+        </div>
+      </div>
+    </div>
   </header>
 
   <container class="results">

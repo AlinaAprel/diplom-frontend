@@ -6,3 +6,9 @@
   padding-top: 14px;
   margin-left: 2px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__greta-img_light {
+    padding-top: 10px;
+  }
+}

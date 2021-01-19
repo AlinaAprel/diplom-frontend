@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 <body>
-  <!-- Для того, чтобы скрыть какое-либо поле меню - нужно поставить класс disabled -->
+  <!-- Для того, чтобы скрыть какой-либо блок - нужно поставить класс disabled -->
+
+  <!-- Без класса disabled меню исчезает, если ширина меньше 768px -->
     <header class="header">
         <p class="header__explorer">NewsExplorer</p>
           <nav class="header__nav">
@@ -30,7 +32,7 @@
           </nav>
     </header>
 
-  <!-- Для того, чтобы скрыть меню - нужно поставить класс disabled -->
+  <!-- Для того, чтобы увидеть меню для телефона - нужно убрать класс disabled -->
     <header class="header disabled">
       <p class="header__explorer">NewsExplorer</p>
         <nav class="header__nav">
@@ -38,6 +40,8 @@
         </nav>
     </header>
 
+    <!-- Для того чтобы увидеть меню header-mobile - уберите класс disabled -->
+    <!-- Без класса disabled меню появляется на ширине 320px и исчезает на 768px  -->
     <header class="header-mobile disabled">
       <div class="header-mobile__container">
         <div class="header-mobile__top">
@@ -60,8 +64,10 @@
       <p class="search__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
       <form class="search__form">
         <input class="search__input-text" type="text" value="Введите тему новости">
+        <!-- Кнопка сама исчезает на ширине меньше 768px -->
         <button class="search__input-button" type="button">Искать</button>
       </form>
+      <!-- Кнопка сама исчезает на ширине больше 767px -->
       <button class="search__button" type="button">Искать</button>
     </container>
 
@@ -117,6 +123,7 @@
         <i class="preloader__circle"></i>
         <p class="preloader__text">Идет поиск новостей...</p>
     </container>
+
     <!-- Для того, чтобы убрать блок "result" - поставьте класс disabled -->
     <container class="result">
       <img class="result__image" alt="Лупа" src="<%=('../images/not-found.svg')%>">
@@ -149,15 +156,15 @@
     </footer>
 
 
-    <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
+    <!-- Для того, чтобы увидеть блок "popup" - уберите класс disabled -->
     <container class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="log">
-              <p class="popup__text">Email</p>
+              <p class="popup__text-email">Email</p>
                 <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
-                  <p class="popup__text">Пароль</p>
+                  <p class="popup__text-parol">Пароль</p>
                 <input type="text" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
               <button class="popup__button">Войти</button>
                 <p class="popup__paragraph">или
@@ -167,7 +174,6 @@
       </div>
     </container>
 
-    <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
     <container class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
@@ -186,7 +192,6 @@
       </div>
     </container>
 
-    <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
     <container class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
@@ -207,7 +212,6 @@
       </div>
     </container>
 
- <!-- Для того, чтобы убрать блок "popup" - поставьте класс disabled -->
     <container class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
@@ -230,7 +234,7 @@
       </div>
     </container>
 
-   <!-- Для того, чтобы убрать блок "signup" - поставьте класс disabled -->
+   <!-- Для того, чтобы увидеть блок "signup" - уберите класс disabled -->
     <container class="signup popup_is-opened disabled">
       <div class="signup__container">
         <img class="signup__close" alt="" src="<%=('../images/close.svg')%>">

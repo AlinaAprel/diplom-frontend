@@ -9,3 +9,18 @@
 
   padding: 34px 36px 28px 36px;
 }
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .popup__content {
+    height: 90vh;
+    width: 100vw;
+
+    padding: 16px 16px 150px 16px;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 767px) {
+  .popup__content {
+    width: 80vw;
+  }
+}

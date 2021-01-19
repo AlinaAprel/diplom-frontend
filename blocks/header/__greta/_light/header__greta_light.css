@@ -11,3 +11,14 @@
     box-sizing: border-box;
     border-radius: 100px;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__greta_light {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin: 18px 20px 8px 15px;
+    width: 100px;
+    height: 40px;
+  }
+}
