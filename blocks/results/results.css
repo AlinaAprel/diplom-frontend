@@ -1,0 +1,26 @@
+@import url(/blocks/results/__header/results__header.css);
+@import url(/blocks/results/__text/results__text.css);
+@import url(/blocks/results/__theme/results__theme.css);
+@import url(/blocks/results/__span/results__span.css);
+
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 104px;
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 374px) {
+  .results {
+    margin-left: 15px;
+    margin-top: 8px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px)  {
+  .results {
+    margin-left: 20px;
+    margin-top: 20px;
+  }
+}

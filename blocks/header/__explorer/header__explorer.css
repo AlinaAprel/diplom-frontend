@@ -1,0 +1,26 @@
+.header__explorer {
+  margin: 30px 0px 26px 104px;
+
+  font-family: Roboto Slab;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__explorer {
+    margin: 22.73px 0px 18.46px 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .header__explorer {
+    margin: 20px 0px 24px 20px;
+    font-size: 15px;
+  }
+}

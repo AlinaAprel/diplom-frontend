@@ -1,0 +1,22 @@
+@import url(/blocks/author/__avatar/author__avatar.css);
+@import url(/blocks/author/__header/author__header.css);
+@import url(/blocks/author/__paragraph/author__paragraph.css);
+@import url(/blocks/author/__text/author__text.css);
+
+
+.author {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .author {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1439px) {
+  .author {
+    justify-content: center;
+  }
+}

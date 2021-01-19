@@ -1,0 +1,24 @@
+@import url(/blocks/footer/__facebook-image/footer__facebook-image.css);
+@import url(/blocks/footer/__facebook/footer__facebook.css);
+@import url(/blocks/footer/__github-image/footer__github-image.css);
+@import url(/blocks/footer/__github/footer__github.css);
+@import url(/blocks/footer/__main/footer__main.css);
+@import url(/blocks/footer/__text/footer__text.css);
+@import url(/blocks/footer/__yandex/footer__yandex.css);
+
+.footer {
+  height: 80px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    height: 64px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer {
+    height: 160px;
+  }
+}

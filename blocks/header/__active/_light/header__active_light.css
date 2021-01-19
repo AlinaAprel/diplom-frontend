@@ -1,0 +1,12 @@
+/* Полоска под ссылками - светлая */
+.header__active_light {
+  border-bottom: 3px solid #1a1b22;
+  padding-bottom: 47px;
+  margin-right: 0px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__active_light {
+    padding-bottom: 37px;
+  }
+}

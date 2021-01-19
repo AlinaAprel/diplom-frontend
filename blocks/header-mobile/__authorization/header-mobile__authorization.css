@@ -1,0 +1,15 @@
+.header-mobile__authorization {
+  width: 288px;
+  height: 56px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  padding: 15px 74px 17px 74px;
+  margin-left: 16px;
+  margin-bottom: 24px;
+
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 100px;
+}

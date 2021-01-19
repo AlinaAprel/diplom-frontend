@@ -1,0 +1,11 @@
+.search__image {
+  height: 576px;
+  width: 100vw;
+  object-fit: cover;
+
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+  z-index: -1;
+}

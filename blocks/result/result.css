@@ -1,0 +1,9 @@
+@import url(/blocks/result/__header/result__header.css);
+@import url(/blocks/result/__image/result__image.css);
+@import url(/blocks/result/__text/result__text.css);
+
+.result{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

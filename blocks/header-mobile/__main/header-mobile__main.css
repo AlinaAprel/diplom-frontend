@@ -1,0 +1,11 @@
+.header-mobile__main {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 56px;
+
+  color: #FFFFFF;
+
+  margin-left: 16px;
+}

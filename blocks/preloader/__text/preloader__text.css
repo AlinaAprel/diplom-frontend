@@ -1,0 +1,25 @@
+.preloader__text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+
+  margin-bottom: 80px;
+
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .preloader__text {
+    font-size: 16px;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .preloader__text {
+    margin-bottom: 25px;
+  }
+}
