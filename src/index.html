@@ -58,7 +58,7 @@
       </div>
     </header>
 
-    <container class="search">
+    <div class="search">
       <img class="search__image" src="<%=('../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png')%>" alt="Телефон">
       <h1 class="search__text">Что творится в мире?</h1>
       <p class="search__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
@@ -69,10 +69,10 @@
       </form>
       <!-- Кнопка сама исчезает на ширине больше 767px -->
       <button class="search__button" type="button">Искать</button>
-    </container>
+    </div>
 
 
-    <container class="saved-cards">
+    <div class="saved-cards">
       <h3 class="saved-cards__title">Результаты поиска</h3>
       <div class="saved-cards__list">
         <div class="saved-cards__container">
@@ -94,7 +94,7 @@
             <img class="saved-cards__save-img" alt="Сохранить" src="<%=('../images/saved.svg')%>">
           </button>
           <p class="saved-cards__time">2 августа, 2019</p>
-          <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h2>
+          <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h3>
           <p class="saved-cards__text">Фотограф отвлеклась от освещения суровой политической
              реальности Мексики, чтобы запечатлеть ускользающую красоту одного
             из местных чудес природы.</p>
@@ -116,32 +116,32 @@
         </div>
         <button class="saved-cards__button">Показать еще</button>
       </div>
-    </container>
+    </div>
 
     <!-- Для того, чтобы убрать блок "preloader" - поставьте класс disabled -->
-    <container class="preloader">
+    <div class="preloader">
         <i class="preloader__circle"></i>
         <p class="preloader__text">Идет поиск новостей...</p>
-    </container>
+    </div>
 
     <!-- Для того, чтобы убрать блок "result" - поставьте класс disabled -->
-    <container class="result">
+    <div class="result">
       <img class="result__image" alt="Лупа" src="<%=('../images/not-found.svg')%>">
       <h2 class="result__header">Ничего не найдено</h2>
       <p class="result_text">К сожалению по вашему запросу
         ничего не найдено.</p>
-    </container>
+      </div>
 
-    <container class="author">
+    <div class="author">
       <img class="author__avatar" alt="Фотография автора" src="<%=('../images/author-photo.png')%>">
-        <text class="author__text">
+        <div class="author__text">
           <h2 class="author__header">Об авторе</h2>
           <p class="author__paragraph"> Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
           чем вы занимаетесь, какими технологиями разработки владеете.</p>
           <p class="author__paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
           и чем можете помочь потенциальным заказчикам.</p>
-        </text>
-    </container>
+          </div>
+      </div>
 
     <footer class="footer">
       <p class="footer__text">© 2020 Supersite, Powered by News API</p>
@@ -157,32 +157,32 @@
 
 
     <!-- Для того, чтобы увидеть блок "popup" - уберите класс disabled -->
-    <container class="popup popup_is-opened disabled">
+    <div class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="log">
               <p class="popup__text-email">Email</p>
-                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
                   <p class="popup__text-parol">Пароль</p>
-                <input type="text" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <input type="text" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
               <button class="popup__button">Войти</button>
                 <p class="popup__paragraph">или
                   <a class="popup__link">Зарегистрироваться</a>
                 </p>
             </form>
       </div>
-    </container>
+    </div>
 
-    <container class="popup popup_is-opened disabled">
+    <div class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="log">
               <p class="popup__text-email">Email</p>
-                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
                   <p class="popup__text-parol">Пароль</p>
-                <input type="password" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
                 <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
               <button class="popup__button">Войти</button>
                 <p class="popup__paragraph">или
@@ -190,19 +190,19 @@
                 </p>
             </form>
       </div>
-    </container>
+    </div>
 
-    <container class="popup popup_is-opened disabled">
+    <div class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="log">
               <p class="popup__text-email">Email</p>
-                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
                 <p class="popup__error_log">Неправильный формат email</p>
                   <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
                   <p class="popup__text-parol margin-null">Пароль</p>
-                <input type="password" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
                 <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
               <button class="popup__button popup__button_active">Войти</button>
                 <p class="popup__paragraph">или
@@ -210,19 +210,19 @@
                 </p>
             </form>
       </div>
-    </container>
+    </div>
 
-    <container class="popup popup_is-opened disabled">
+    <div class="popup popup_is-opened disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">Регистрация</h3>
             <form class="popup__form" name="log">
               <p class="popup__text-email">Email</p>
-                <input type="email" name="email" id="input-log" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
                   <p class="popup__text-parol">Пароль</p>
-                <input type="password" name="parol" id="input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
                 <p class="popup__text-name">Имя</p>
-                <input type="text" name="name" id="input-name" class="popup__input popup__input_type_name" placeholder="Введите своё имя" required>
+                <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Введите своё имя" required>
                 <p class="popup__error_sign">Такой пользователь уже есть</p>
                 <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
                 <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
@@ -232,16 +232,16 @@
                 </p>
             </form>
       </div>
-    </container>
+    </div>
 
    <!-- Для того, чтобы увидеть блок "signup" - уберите класс disabled -->
-    <container class="signup popup_is-opened disabled">
+    <div class="signup popup_is-opened disabled">
       <div class="signup__container">
         <img class="signup__close" alt="" src="<%=('../images/close.svg')%>">
         <h4 class="signup__header">Пользователь успешно зарегистрирован!</h4>
         <p class="signup__log">Войти</p>
       </div>
-    </container>
+    </div>
     <!-- <script src="<%= htmlWebpackPlugin.files.js %>"></script> -->
 </body>
 </html>
