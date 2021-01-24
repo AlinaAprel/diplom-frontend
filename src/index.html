@@ -157,11 +157,11 @@
 
 
     <!-- Для того, чтобы увидеть блок "popup" - уберите класс disabled -->
-    <div class="popup popup_is-opened disabled">
+    <!-- <div class="popup popup_is-opened disabled" id="popup-login-disabled">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">Вход</h3>
-            <form class="popup__form" name="log">
+            <form class="popup__form" name="log" id="input-login-disabled">
               <p class="popup__text-email">Email</p>
                 <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
                   <p class="popup__text-parol">Пароль</p>
@@ -183,26 +183,27 @@
                 <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
                   <p class="popup__text-parol">Пароль</p>
                 <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
-                <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
-              <button class="popup__button">Войти</button>
+                Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
+              <!-- <button class="popup__button">Войти</button>
                 <p class="popup__paragraph">или
                   <a class="popup__link">Зарегистрироваться</a>
                 </p>
             </form>
       </div>
-    </div>
+    </div> -->
 
-    <div class="popup popup_is-opened disabled">
+    <div class="popup popup_is-opened disabled" id="popup-signin">
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
           <h3 class="popup__title">Вход</h3>
-            <form class="popup__form" name="log">
+            <form class="popup__form" name="log" id="input-signin">
               <p class="popup__text-email">Email</p>
                 <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
-                <p class="popup__error_log">Неправильный формат email</p>
+                <p class="popup__error_log"></p>
                   <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
-                  <p class="popup__text-parol margin-null">Пароль</p>
+                   <p class="popup__text-parol margin-null">Пароль</p>
                 <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <p class="popup__error_log"></p>
                 <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
               <button class="popup__button popup__button_active">Войти</button>
                 <p class="popup__paragraph">или
@@ -212,21 +213,24 @@
       </div>
     </div>
 
-    <div class="popup popup_is-opened disabled">
+    <div class="popup popup_is-opened disabled" id="popup-signup">
       <div class="popup__content">
-        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
+        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close" id="close-signup">
           <h3 class="popup__title">Регистрация</h3>
-            <form class="popup__form" name="log">
+            <form class="popup__form" name="log" id="signup-form">
               <p class="popup__text-email">Email</p>
-                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <input type="email" name="email" id="signup-input-email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <p class="popup__error_log" id="signup-input-email__error"></p>
                   <p class="popup__text-parol">Пароль</p>
-                <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <input type="password" name="parol" id="signup-input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <p class="popup__error_log" id="signup-input-parol__error"></p>
                 <p class="popup__text-name">Имя</p>
-                <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Введите своё имя" required>
-                <p class="popup__error_sign">Такой пользователь уже есть</p>
+                <input type="text" name="name" id="signup-input-name" class="popup__input popup__input_type_name" placeholder="Введите своё имя" required>
+                <p class="popup__error_log" id="signup-input-name__error"></p>
+                <p class="popup__error_sign"></p>
                 <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
                 <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
-              <button class="popup__button margin-null">Зарегистрироваться</button>
+              <button class="popup__button margin-null" id="button-signup">Зарегистрироваться</button>
                 <p class="popup__paragraph">или
                   <a class="popup__link">Войти</a>
                 </p>
@@ -242,6 +246,6 @@
         <p class="signup__log">Войти</p>
       </div>
     </div>
-    <!-- <script src="<%= htmlWebpackPlugin.files.js %>"></script> -->
+    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
 </html>
