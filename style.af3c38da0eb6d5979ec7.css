@@ -351,42 +351,42 @@ template {
   font-family: "Inter";
   font-style: "normal";
   font-weight: 400;
-  src: url(a252fc44cf11fd602874c8b97bf9fe20.woff) format("woff");
+  src: url(./vendor/fonts/inter-regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-style: "normal";
   font-weight: 400;
-  src: url(59d18e163bfcd0607572a155d0def686.woff) format("woff");
+  src: url(./vendor/fonts/roboto-regular.woff) format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-style: "lighter";
   font-weight: 200;
-  src: url(5673e7a07239f478532538ee153d9d97.woff) format("woff");
+  src: url(./vendor/fonts/roboto-medium.woff) format("woff");
 }
 
 @font-face {
   font-family: "Roboto";
   font-style: "bold";
   font-weight: 700;
-  src: url(31affea0add82d57c7825c66946ef183.woff) format("woff");
+  src: url(./vendor/fonts/roboto-black.woff) format("woff");
 }
 
 @font-face {
   font-family: "Roboto Slab";
   font-style: "normal";
   fonr-weight: 400;
-  src: url(d3d7cd6d622b03852d2f05b1a0ffb9e7.woff) format("woff")
+  src: url(./vendor/fonts/robotoslab-regular.woff) format("woff")
 }
 
 @font-face {
   font-family: "Source";
   font-style: "normal";
   font-weight: 400;
-  src: url(95f3ed417b8520ba43c9608e1f2baf78.woff) format("woff")
+  src: url(./vendor/fonts/sourcesanspro-regular.woff) format("woff")
 }
 .header__autorization {
   width: 152px;
