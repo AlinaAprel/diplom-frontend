@@ -1,0 +1,25 @@
+@import url(/blocks/result-cards/__author/result-cards__author.css);
+@import url(/blocks/result-cards/__container/result-cards__container.css);
+@import url(/blocks/result-cards/__list/result-cards__list.css);
+@import url(/blocks/result-cards/__header/result-cards__header.css);
+@import url(/blocks/result-cards/__image/result-cards__image.css);
+@import url(/blocks/result-cards/__text/result-cards__text.css);
+@import url(/blocks/result-cards/__time/result-cards__time.css);
+@import url(/blocks/result-cards/__theme/result-cards__theme.css);
+@import url(/blocks/result-cards/__delete/result-cards__delete.css);
+@import url(/blocks/result-cards/__delete-img/result-cards__delete-img.css);
+@import url(/blocks/result-cards/__statement/result-cards__statement.css);
+@import url(/blocks/result-cards/__link/result-cards__link.css);
+
+@import url(/blocks/result-cards/__title/result-cards__title.css);
+@import url(/blocks/result-cards/__button/result-cards__button.css);
+@import url(/blocks/result-cards/__save-img/result-cards__save-img.css);
+@import url(/blocks/result-cards/__save/result-cards__save.css);
+
+
+.result-cards {
+  display: flex;
+  flex-direction: column;
+
+  background: #e5e5e5;
+}

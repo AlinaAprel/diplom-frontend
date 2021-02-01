@@ -1,4 +1,19 @@
 .saved-cards__save-img {
   width: 24px;
   height: 24px;
+
+  background-image: url('../../../images/bookmark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+.saved-cards__saved-img {
+  width: 24px;
+  height: 24px;
+
+  background-image: url('../../../images/bookmark-saved.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
 }

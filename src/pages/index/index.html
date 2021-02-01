@@ -8,7 +8,7 @@
   <meta name="author" content="Alina Aprel">
   <title>NewsExplorer</title>
   <link rel="icon" type="image/x-icon" href="<%=('../images/favicon.svg')%>">
-  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
 </head>
 <body>
   <!-- Для того, чтобы скрыть какой-либо блок - нужно поставить класс disabled -->
@@ -19,7 +19,7 @@
           <nav class="header__nav">
                 <p class="header__main header__active">Главная</p>
                 <!-- Чтобы скрыть поле "Сохраненные статьи" - поставьте класс disabled -->
-                <a class="header__saved" href="saved.html">Сохранённые статьи</a>
+                <a class="header__saved" href="saved.html" id="link-saved">Сохранённые статьи</a>
                 <!-- Чтобы скрыть поле "Авторизоваться" - поставьте класс disabled -->
               <div class="header__rectangle">
                 <a class="header__autorization" href="#">Авторизоваться</a>
@@ -50,7 +50,7 @@
         </div>
         <div class="header-mobile__menu">
           <a class="header-mobile__main">Главная</a>
-          <a class="header-mobile__saved">Сохраненные статьи</a>
+          <a class="header-mobile__saved" id="link-saved">Сохраненные статьи</a>
           <div class="header-mobile__authorization">
             <a class="header-mobile__authorization-link">Авторизоваться</a>
           </div>
@@ -63,69 +63,34 @@
       <h1 class="search__text">Что творится в мире?</h1>
       <p class="search__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
       <form class="search__form">
-        <input class="search__input-text" type="text" value="Введите тему новости">
+        <input class="search__input-text" type="text" placeholder="Введите тему новости" required>
         <!-- Кнопка сама исчезает на ширине меньше 768px -->
         <button class="search__input-button" type="button">Искать</button>
       </form>
       <!-- Кнопка сама исчезает на ширине больше 767px -->
       <button class="search__button" type="button">Искать</button>
+      <p class="search__error"></p>
     </div>
 
 
-    <div class="saved-cards">
-      <h3 class="saved-cards__title">Результаты поиска</h3>
-      <div class="saved-cards__list">
-        <div class="saved-cards__container">
-            <button class="saved-cards__save">
-              <img class="saved-cards__save-img" alt="Сохранить" src="<%=('../images/save.svg')%>">
-            </button>
-          <img class="saved-cards__image" alt="Цветок" src="<%=('../images/flower-one.png')%>">
-          <p class="saved-cards__time">2 августа, 2019</p>
-          <h2 class="saved-cards__header">Национальное достояние – парки</h2>
-          <p class="saved-cards__text">В 2016 году Америка отмечала важный юбилей:
-            сто лет назад здесь начала складываться система национальных парков –
-          охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          <p class="saved-cards__author">Дзен</p>
-        </div>
+    <div class="result-cards disabled">
+      <h3 class="result-cards__title">Результаты поиска</h3>
+      <div class="result-cards__list">
+        <!-- Начало примера верстки карточки -->
 
-        <div class="saved-cards__container">
-          <img class="saved-cards__image" alt="Цветок" src="<%=('../images/way.png')%>">
-          <button class="saved-cards__save">
-            <img class="saved-cards__save-img" alt="Сохранить" src="<%=('../images/saved.svg')%>">
-          </button>
-          <p class="saved-cards__time">2 августа, 2019</p>
-          <h3 class="saved-cards__header">Лесные огоньки: история одной фотографии</h3>
-          <p class="saved-cards__text">Фотограф отвлеклась от освещения суровой политической
-             реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-            из местных чудес природы.</p>
-          <p class="saved-cards__author">Афиша</p>
-        </div>
-
-        <div class="saved-cards__container">
-          <img class="saved-cards__image" alt="Цветок" src="<%=('../images/flower-second.png')%>">
-          <button class="saved-cards__statement">Войдите, чтобы сохранять статьи</button>
-          <button class="saved-cards__save">
-            <img class="saved-cards__save-img" alt="Сохранить" src="<%=('../images/save-dark.svg')%>">
-          </button>
-          <p class="saved-cards__time">2 августа, 2019</p>
-          <h2 class="saved-cards__header">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h2>
-          <p class="saved-cards__text">Знаменитый фотограф снимает первозданные леса России, чтобы
-             рассказать о необходимости их сохранения. В этот раз он отправился
-              в Двинско-Пинежскую тайгу, где...</p>
-          <p class="saved-cards__author">Медиазона</p>
-        </div>
-        <button class="saved-cards__button">Показать еще</button>
+        <!-- Конец примера верстки карточки -->
       </div>
+      <button class="result-cards__button">Показать еще</button>
     </div>
 
     <!-- Для того, чтобы убрать блок "preloader" - поставьте класс disabled -->
-    <div class="preloader">
+    <div class="preloader disabled">
         <i class="preloader__circle"></i>
         <p class="preloader__text">Идет поиск новостей...</p>
     </div>
 
     <!-- Для того, чтобы убрать блок "result" - поставьте класс disabled -->
-    <div class="result">
+    <div class="result disabled">
       <img class="result__image" alt="Лупа" src="<%=('../images/not-found.svg')%>">
       <h2 class="result__header">Ничего не найдено</h2>
       <p class="result_text">К сожалению по вашему запросу
@@ -155,59 +120,23 @@
           </a>
     </footer>
 
-
-    <!-- Для того, чтобы увидеть блок "popup" - уберите класс disabled -->
-    <!-- <div class="popup popup_is-opened disabled" id="popup-login-disabled">
-      <div class="popup__content">
-        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
-          <h3 class="popup__title">Вход</h3>
-            <form class="popup__form" name="log" id="input-login-disabled">
-              <p class="popup__text-email">Email</p>
-                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
-                  <p class="popup__text-parol">Пароль</p>
-                <input type="text" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
-              <button class="popup__button">Войти</button>
-                <p class="popup__paragraph">или
-                  <a class="popup__link">Зарегистрироваться</a>
-                </p>
-            </form>
-      </div>
-    </div>
-
-    <div class="popup popup_is-opened disabled">
-      <div class="popup__content">
-        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
-          <h3 class="popup__title">Вход</h3>
-            <form class="popup__form" name="log">
-              <p class="popup__text-email">Email</p>
-                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
-                  <p class="popup__text-parol">Пароль</p>
-                <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
-                Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
-              <!-- <button class="popup__button">Войти</button>
-                <p class="popup__paragraph">или
-                  <a class="popup__link">Зарегистрироваться</a>
-                </p>
-            </form>
-      </div>
-    </div> -->
-
     <div class="popup popup_is-opened disabled" id="popup-signin">
       <div class="popup__content">
-        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close">
+        <img src="<%=('../images/close.svg')%>" alt="" id="close-signin" class="popup__close">
           <h3 class="popup__title">Вход</h3>
             <form class="popup__form" name="log" id="input-signin">
               <p class="popup__text-email">Email</p>
-                <input type="email" name="email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
-                <p class="popup__error_log"></p>
+                <input type="email" name="email" id="signin-input-email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <p class="popup__error_log" id="signin-input-email__error"></p>
                   <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
-                   <p class="popup__text-parol margin-null">Пароль</p>
-                <input type="password" name="parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
-                <p class="popup__error_log"></p>
+                   <p class="popup__text-parol">Пароль</p>
+                <input type="password" name="parol" id="signin-input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <p class="popup__error_log" id="signin-input-parol__error"></p>
+                <p class="popup__error_signin"></p>
                 <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
-              <button class="popup__button popup__button_active">Войти</button>
+              <button class="popup__button" id="button-signin">Войти</button>
                 <p class="popup__paragraph">или
-                  <a class="popup__link">Зарегистрироваться</a>
+                  <a class="popup__link" id="link-for-signup">Зарегистрироваться</a>
                 </p>
             </form>
       </div>
@@ -217,7 +146,7 @@
       <div class="popup__content">
         <img src="<%=('../images/close.svg')%>" alt="" class="popup__close" id="close-signup">
           <h3 class="popup__title">Регистрация</h3>
-            <form class="popup__form" name="log" id="signup-form">
+            <form class="popup__form" name="signup" id="signup-form">
               <p class="popup__text-email">Email</p>
                 <input type="email" name="email" id="signup-input-email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
                 <p class="popup__error_log" id="signup-input-email__error"></p>
@@ -227,12 +156,12 @@
                 <p class="popup__text-name">Имя</p>
                 <input type="text" name="name" id="signup-input-name" class="popup__input popup__input_type_name" placeholder="Введите своё имя" required>
                 <p class="popup__error_log" id="signup-input-name__error"></p>
-                <p class="popup__error_sign"></p>
+                <p class="popup__error_signup"></p>
                 <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
                 <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
               <button class="popup__button margin-null" id="button-signup">Зарегистрироваться</button>
                 <p class="popup__paragraph">или
-                  <a class="popup__link">Войти</a>
+                  <a class="popup__link" id="link-for-signin">Войти</a>
                 </p>
             </form>
       </div>
@@ -243,9 +172,9 @@
       <div class="signup__container">
         <img class="signup__close" alt="" src="<%=('../images/close.svg')%>">
         <h4 class="signup__header">Пользователь успешно зарегистрирован!</h4>
-        <p class="signup__log">Войти</p>
+        <a class="signup__log" id="link-for-login">Войти</a>
       </div>
     </div>
-    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
 </body>
+<script  type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks.index.js %>"></script>
 </html>

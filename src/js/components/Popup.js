@@ -5,8 +5,8 @@ export class Popup {
     this.classOpenPopup = classOpenPopup;
   }
 
-  setContent() {
-
+  toSignIn() {
+    this.element.classList.remove(this.classOpenPopup)
   }
 
   clearContent() {

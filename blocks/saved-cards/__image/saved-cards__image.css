@@ -1,20 +1,6 @@
 .saved-cards__image {
-  height: 272px;
-  width: 400px;
+  height: 150px;
+  width: 224px;
 
   border-radius: 25px 25px 0px 0px;
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .saved-cards__image {
-    width: 224px;
-    height: 150px;
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .saved-cards__image {
-    width: 288px;
-    height: 196px;
-  }
 }

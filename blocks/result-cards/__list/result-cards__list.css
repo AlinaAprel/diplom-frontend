@@ -1,0 +1,14 @@
+.result-cards__list {
+  margin-top: 64px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 224px);
+  grid-gap: 16px 16px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .result-cards__list {
+    grid-template-columns: repeat(1, 224px);
+  }
+}

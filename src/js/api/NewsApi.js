@@ -1,20 +1,15 @@
 export class NewsApi {
-  constructor(config, serverUrl) {
+  constructor(serverUrl) {
     this.url = serverUrl;
-    this.headers = config.headers;
-}
-
-  getNews() {
-    return fetch(`${this.url}`, {
-      method: 'GET',
-      headers: this.headers
+    this.apiKey = '0105ea013c2149a7861a4d8c6b66d6b9'
+  }
+  getNews(theme, time) {
+    return fetch(`${this.url}q=${theme}$from=${time.getDate() - 7}$to=${time.getDate()}&pageSize=${100}&apiKey=${this.apiKey}`)
+    .then((res) => {
+      return res.json()
     })
-    .then((result) => {
-      if(result.ok) {
-        console.log(result)
-        return result.json()
-      }
-      return Promise.reject(new Error(`Ошибка: ${res.status}`));
+    .catch((err) => {
+      return err
     })
   }
 }

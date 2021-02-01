@@ -1,6 +1,7 @@
 .popup__text-parol {
   max-width: 139px;
   margin-top: 33px;
+  margin-bottom: 8px;
 
   font-family: Inter;
   font-style: normal;
@@ -14,5 +15,6 @@
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .popup__text-parol {
     margin-top: 30px;
+    margin-bottom: 4px;
   }
 }

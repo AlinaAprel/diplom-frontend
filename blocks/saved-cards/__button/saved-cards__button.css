@@ -2,8 +2,11 @@
   width: 228px;
   height: 64px;
 
-  grid-column-start: 2;
-  margin: 64px 86px 0px 86px;
+  margin-top: 64px;
+  margin-bottom: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 10px 20px 10px;
 
   background: #ffffff;
   border-radius: 80px;
@@ -24,7 +27,7 @@
   opacity: 0.9;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+/* @media screen and (min-width: 768px) and (max-width: 1023px) {
   .saved-cards__button {
     width: 224px;
     height: 56px;
@@ -61,4 +64,4 @@
     grid-row-start: 4;
     grid-column-start: 1;
   }
-}
+} */

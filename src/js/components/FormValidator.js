@@ -1,22 +1,3 @@
-// export class FormValidator {
-//   constructor(form, button) {
-//     this.form = form;
-//     this.button = button;
-//   }
-
-//   checkInputRequired(input, error) {
-//     if (input.value.length === 0) {
-//       error.textContent = 'Это обязательное поле';
-//     }
-//   }
-
-//   checkEmail(input, error) {
-//     if (input.pattern === false) {
-//       error.validationMessage = 'Неверная почта'
-//     }
-//   }
-// }
-
 export class FormValidator {
   constructor(form, patternEmail, button) {
     this.form = form;

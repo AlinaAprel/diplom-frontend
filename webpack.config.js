@@ -6,10 +6,13 @@ const webpack = require('webpack');
 
 
 module.exports = {
-  entry: { main: './src/index.js' },
+  entry: {
+    index: './src/pages/index/index.js',
+    saved: './src/pages/saved/saved.js'
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
@@ -46,17 +49,19 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
+      filename: '[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
-      inject: 'body',
-      filename: 'index.html'
+      template: './src/pages/index/index.html',
+      inject: true,
+      chunks: ['index'],
+      filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-      template: './src/saved.html',
-      inject: 'body',
-      filename: 'saved.html'
+      template: './src/pages/saved/saved.html',
+      inject: true,
+      chunks: ['saved'],
+      filename: 'saved.html',
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

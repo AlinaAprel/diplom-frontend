@@ -5,6 +5,7 @@
 @import url(/blocks/search/__input-text/search__input-text.css);
 @import url(/blocks/search/__paragraph/search__paragraph.css);
 @import url(/blocks/search/__text/search__text.css);
+@import url(/blocks/search/__error/search__error.css);
 
 .search {
   display: flex;

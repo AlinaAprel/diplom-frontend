@@ -1,5 +1,5 @@
 .search__image {
-  height: 576px;
+  height: 536px;
   width: 100vw;
   object-fit: cover;
 
@@ -8,4 +8,16 @@
   top: 0px;
 
   z-index: -1;
+}
+
+@media screen and (min-width: 1023px) {
+  .search__image {
+    height: 546px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .search__image {
+    height: 500px;
+  }
 }

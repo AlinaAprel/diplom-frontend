@@ -1,0 +1,28 @@
+.result-cards__author {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+
+  width: 352px;
+  margin: 0;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  color: #B6BCBF;
+}
+
+@media screen and (min-width: 320px) {
+  .result-cards__author {
+    left: 16px;
+    bottom: 16px;
+
+    width: 192px;
+  }
+}
