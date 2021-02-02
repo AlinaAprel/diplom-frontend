@@ -57,7 +57,11 @@ const resultBlock = document.querySelector('.result-cards');
 const list = document.querySelector('.result-cards__list');
 const linkSaved = document.querySelector('#link-saved');
 const btnShowMore = document.querySelector('.result-cards__button');
+const nameUser = document.querySelector('.header__greta-link');
 let time = new Date()
+
+const name = localStorage.getItem('name')
+const savedMenu = document.querySelector('.header__saved');
 
 // RENDER
 const newsCardList = new NewsCardList(list)
@@ -67,7 +71,6 @@ const menu = new Menu('disabled', btnAuthorization, btnMenuSignIn)
 
 // SEARCH
 const btnSearch = document.querySelector('.search__input-button');
-const btnSearchMobile = document.querySelector('.search__button');
 const inputSearch = document.querySelector('.search__input-text');
 const errorSearch = document.querySelector('.search__error');
 
@@ -85,18 +88,26 @@ popupSignupForm.addEventListener('input', () => {
   formSignUpValidity.setSubmitButton();
 })
 
+function getName(name) {
+  nameUser.textContent = name;
+}
+
+getName(name);
+
 btnSubmitSignUp.addEventListener('click', (event) => {
   event.preventDefault()
   main.signup(popupSignUpInputEmail.value, popupSignUpInputParol.value, popupSignUpInputName.value)
   .then((res) => {
-    console.log(res.message)
-    if (res.status === 200) {
+    if (res === 'Пользователь уже зарегистрирован') {
+      errorFormSignUp.textContent = 'Пользователь уже зарегистрирован!';
+      formSignUpValidity.removeClassButton()
+    } else {
+      localStorage.setItem('name', res.data.name);
+      const name = localStorage.getItem('name')
+      nameUser.textContent = name;
       errorFormSignUp.textContent = '';
       popupAuthorization.close()
       popupLogin.toSignIn()
-    } else {
-      errorFormSignUp.textContent = 'Пользователь уже зарегистрирован!';
-      formSignUpValidity.removeClassButton()
     }
   })
   .catch((err) => {
@@ -138,6 +149,9 @@ btnSubmitSignIn.addEventListener('click', (event) => {
     localStorage.getItem('token')
     if (res.token !== undefined) {
       errorFormSignIn.textContent = '';
+      const name = localStorage.getItem('name')
+      nameUser.textContent = name;
+      savedMenu.classList.remove('disabled')
       menu.isSignIn()
       popupEntery.close()
       popupEntery.clearContent()
@@ -151,7 +165,6 @@ btnSubmitSignIn.addEventListener('click', (event) => {
     return err.message
   })
 })
-
 
 linkSignIn.addEventListener('click', () => {
   popupEntery.open()
@@ -167,10 +180,10 @@ linkForLogIn.addEventListener('click', () => {
 // SEARCH
 btnSearch.addEventListener('click', () => {
   resultBlock.classList.add('disabled')
+  noResult.classList.add('disabled')
   newsCardList.clear()
   main.getUser()
   .then((res) => {
-    if (res === 200) {
       if (inputSearch.value.length > 0) {
         preloader.classList.remove('disabled')
         errorSearch.textContent = ''
@@ -182,6 +195,7 @@ btnSearch.addEventListener('click', () => {
           resultBlock.classList.remove('disabled')
           preloader.classList.add('disabled')
             if (res.articles.length === 0) {
+              resultBlock.classList.add('disabled')
               noResult.classList.remove('disabled')
             }
               newsCardList.setMainApi(main)
@@ -193,10 +207,6 @@ btnSearch.addEventListener('click', () => {
       } else {
         errorSearch.textContent = 'Нужно ввести ключевое слово'
       }
-    }
-    if (res === 401) {
-      errorSearch.textContent = 'Необходима авторизация';
-    }
   })
 })
 
@@ -205,8 +215,11 @@ main.getUser()
   if (res === 401) {
     btnAuthorization.classList.remove('disabled')
     btnMenuSignIn.classList.add('disabled')
-  } else {
+    savedMenu.classList.add('disabled')
+  }
+  if (res === 200) {
     btnMenuSignIn.classList.remove('disabled')
+    savedMenu.classList.remove('disabled')
     btnAuthorization.classList.add('disabled')
   }
 })

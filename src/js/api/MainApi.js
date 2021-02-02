@@ -17,10 +17,10 @@ export class MainApi {
       }),
     })
     .then((res) => {
-      return res
-    })
-    .catch((err) => {
-      return err.message
+      if (res.ok) {
+        return res.json()
+      }
+      return Promise.reject(new Error(`Ошибка: ${res.status}`))
     })
   }
 
@@ -37,10 +37,10 @@ export class MainApi {
         })
     })
     .then((res) => {
+      if (res.ok) {
         return res.json()
-    })
-    .catch((err) => {
-      return err
+      }
+      return Promise.reject(new Error(`Ошибка: ${res.status}`))
     })
 }
 
@@ -63,13 +63,12 @@ export class MainApi {
       })
   })
   .then((res) => {
-    console.log(res)
-    return res.json()
+    if (res.ok) {
+      return res.json()
+    }
+    return Promise.reject(new Error(`Ошибка: ${res.status}`))
   })
-  .catch((err) => {
-    return err
-  })
-  }
+}
 
   getUser() {
     return fetch(`${this.url}/users/me`, {
@@ -81,7 +80,7 @@ export class MainApi {
       }
     })
     .then((res) => {
-      return res.status
+        return res.status
     })
   }
 
@@ -95,7 +94,10 @@ export class MainApi {
       }
     })
     .then((res) => {
-      return res.json()
+      if (res.ok) {
+        return res.json()
+      }
+      return Promise.reject(new Error(`Ошибка: ${res.status}`))
     })
   }
 
@@ -109,7 +111,10 @@ export class MainApi {
       }
     })
     .then((res) => {
-      return res.json()
+      if (res.ok) {
+        return res.json()
+      }
+      return Promise.reject(new Error(`Ошибка: ${res.status}`))
     })
   }
 }

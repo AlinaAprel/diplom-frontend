@@ -5,6 +5,8 @@ import {NewsCard} from '../../js/components/NewsCard';
 const savedCardsList = document.querySelector('.saved-cards__list');
 const numberOfCards = document.querySelector('#number');
 const allThemeText = document.querySelector('.results__theme')
+const nameUser = document.querySelector('.header__greta-link');
+const nameUserText = document.querySelector('#name');
 
 const serverMainApiUrl = 'https://yandex.diplom.students.nomoreparties.space';
 
@@ -21,6 +23,10 @@ function backToMain() {
 }
 
 backToMain()
+
+const name = localStorage.getItem('name');
+nameUser.textContent = name;
+nameUserText.textContent = name;
 
 main.getArticles()
 .then((res) => {

@@ -17,3 +17,12 @@
   background-repeat: no-repeat;
   z-index: 100;
 }
+.saved-cards__no-saved {
+  width: 24px;
+  height: 24px;
+
+  background-image: url('../../../images/bookmark-black.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+}

@@ -6,10 +6,10 @@ export class NewsApi {
   getNews(theme, time) {
     return fetch(`${this.url}q=${theme}$from=${time.getDate() - 7}$to=${time.getDate()}&pageSize=${100}&apiKey=${this.apiKey}`)
     .then((res) => {
-      return res.json()
-    })
-    .catch((err) => {
-      return err
+      if (res.ok) {
+        return res.json()
+      }
+      return Promise.reject(new Error(`Ошибка: ${res.status}`))
     })
   }
 }

@@ -12,17 +12,18 @@ export class NewsCardList {
   }
 
   createCard(card) {
+    this.card = card;
     const monthNames = ["января", "февраля", "марта", "апреля", "мая", "июня",
     "июля", "августа", "сентября", "октября", "ноября", "декабря"
     ];
-    let createDate = new Date(card.date)
+    let createDate = new Date(this.card.date)
     let date = [createDate.getDate() + ' ' + monthNames[createDate.getMonth() + 1] + ',' + ' ' + createDate.getFullYear()];
     const cardContainer = document.createElement('div');
     cardContainer.classList.add('result-cards__container');
 
     const linkSource = document.createElement('a');
     linkSource.classList.add('result-cards__link');
-    linkSource.setAttribute('src', `${card.link}`)
+    linkSource.setAttribute('src', `${this.card.link}`)
 
     const cardImageButton = document.createElement('button');
     cardImageButton.classList.add('result-cards__save');
@@ -32,7 +33,7 @@ export class NewsCardList {
 
     const cardImage = document.createElement('img');
     cardImage.classList.add('result-cards__image');
-    cardImage.setAttribute('src', `${card.image}`)
+    cardImage.setAttribute('src', `${this.card.image}`)
 
     const cardTime = document.createElement('p');
     cardTime.classList.add('result-cards__time');
@@ -40,15 +41,15 @@ export class NewsCardList {
 
     const cardHeader = document.createElement('h2');
     cardHeader.classList.add('result-cards__header');
-    cardHeader.textContent = card.title;
+    cardHeader.textContent = this.card.title;
 
     const cardText = document.createElement('p');
     cardText.classList.add('result-cards__text');
-    cardText.textContent = card.text;
+    cardText.textContent = this.card.text;
 
     const cardAuthor = document.createElement('p');
     cardAuthor.classList.add('result-cards__author');
-    cardAuthor.textContent = card.source;
+    cardAuthor.textContent = this.card.source;
 
     cardImageButton.appendChild(cardSaveImage);
     linkSource.appendChild(cardImageButton);
@@ -59,7 +60,7 @@ export class NewsCardList {
     linkSource.appendChild(cardAuthor);
     cardContainer.appendChild(linkSource);
 
-    this.saveImage(cardContainer, card.data)
+    this.saveImage(cardContainer, this.card.data)
 
       this.count += 1;
       this.countStart += 1;
@@ -96,24 +97,43 @@ export class NewsCardList {
   }
 
   saveImage(card, keyword) {
-    card.addEventListener('click', (event) => {
-      if (event.target.classList.contains('result-cards__save-img')) {
-        event.target.classList.toggle('result-cards__saved-img')
-      }
+    this.main.getUser()
+    .then((res) => {
+      if (res === 401) {
+        card.addEventListener('click', (event) => {
+          if (event.target.classList.contains('result-cards__save-img')) {
+            event.target.classList.add('saved-cards__no-saved')
+          }
+        })
+      } else {
+        card.addEventListener('click', (event) => {
+          if (event.target.classList.contains('result-cards__save-img')) {
+            event.target.classList.toggle('result-cards__saved-img')
+          }
 
-      if (event.target.classList.contains('result-cards__saved-img')) {
-        this.keyword = keyword;
-        this.title = card.querySelector('.result-cards__header').textContent;
-        this.text = card.querySelector('.result-cards__text').textContent;
-        this.date = card.querySelector('.result-cards__time').textContent;
-        this.source = card.querySelector('.result-cards__author').textContent;
-        this.link = card.querySelector('.result-cards__link').getAttribute('src');
-        this.image = card.querySelector('.result-cards__image').src;
-        console.log(this.date)
-        this.main.createArticle(this.keyword, this.title, this.text, this.date, this.source, this.link, this.image)
+          if (event.target.classList.contains('result-cards__saved-img')) {
+            this.keyword = keyword;
+            this.title = card.querySelector('.result-cards__header').textContent;
+            this.text = card.querySelector('.result-cards__text').textContent;
+            this.date = card.querySelector('.result-cards__time').textContent;
+            this.source = card.querySelector('.result-cards__author').textContent;
+            this.link = card.querySelector('.result-cards__link').getAttribute('src');
+            this.image = card.querySelector('.result-cards__image').src;
+            this.main.createArticle(this.keyword, this.title, this.text, this.date, this.source, this.link, this.image)
+            .then((res) => {
+              console.log(res)
+            })
+            .catch((err) => {
+              console.log(err)
+            })
+          }
+        })
       }
     })
-  }
+    .catch((err) => {
+      console.log(err)
+    })
+}
 
   clear() {
     while (this.list.firstChild) this.list.removeChild(this.list.firstChild);
