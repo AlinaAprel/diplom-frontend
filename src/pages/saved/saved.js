@@ -16,7 +16,7 @@ const newsCard = new NewsCard(savedCardsList)
 function backToMain() {
   main.getUser()
   .then((res) => {
-    if (res === 401) {
+    if (res.message === 'Ошибка: 401') {
       window.location.href = 'index.html'
     }
   })

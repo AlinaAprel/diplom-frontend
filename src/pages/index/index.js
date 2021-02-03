@@ -88,12 +88,6 @@ popupSignupForm.addEventListener('input', () => {
   formSignUpValidity.setSubmitButton();
 })
 
-function getName(name) {
-  nameUser.textContent = name;
-}
-
-getName(name);
-
 btnSubmitSignUp.addEventListener('click', (event) => {
   event.preventDefault()
   main.signup(popupSignUpInputEmail.value, popupSignUpInputParol.value, popupSignUpInputName.value)
@@ -144,17 +138,26 @@ btnSubmitSignIn.addEventListener('click', (event) => {
   event.preventDefault()
   main.signin(popupSignInInputEmail.value, popupSignInInputParol.value)
   .then((res) => {
-    console.log(res)
     localStorage.setItem('token', res.token)
     localStorage.getItem('token')
     if (res.token !== undefined) {
-      errorFormSignIn.textContent = '';
-      const name = localStorage.getItem('name')
-      nameUser.textContent = name;
-      savedMenu.classList.remove('disabled')
-      menu.isSignIn()
-      popupEntery.close()
-      popupEntery.clearContent()
+      main.getUser()
+      .then((res) => {
+        if (res.data != undefined) {
+          localStorage.setItem('name', res.data.name);
+          const name = localStorage.getItem('name')
+          nameUser.textContent = name;
+          errorFormSignIn.textContent = '';
+          savedMenu.classList.remove('disabled')
+          menu.isSignIn()
+          popupEntery.close()
+          popupEntery.clearContent()
+        }
+      })
+    }
+    if (res.token === undefined) {
+      errorFormSignIn.textContent = 'Необходима авторизация';
+      formSignInValidity.removeClassButton()
     }
     if (res.message.toString().length > 0) {
       errorFormSignIn.textContent = res.message.toString();
@@ -182,44 +185,50 @@ btnSearch.addEventListener('click', () => {
   resultBlock.classList.add('disabled')
   noResult.classList.add('disabled')
   newsCardList.clear()
-  main.getUser()
-  .then((res) => {
-      if (inputSearch.value.length > 0) {
-        preloader.classList.remove('disabled')
-        errorSearch.textContent = ''
-        news.getNews(inputSearch.value, time)
-        .then((res) => {
-          if (res.articles.length > 3) {
-            btnShowMore.classList.remove('disabled')
-          }
-          resultBlock.classList.remove('disabled')
-          preloader.classList.add('disabled')
-            if (res.articles.length === 0) {
-              resultBlock.classList.add('disabled')
-              noResult.classList.remove('disabled')
-            }
-              newsCardList.setMainApi(main)
-              newsCardList.addCore(res.articles, inputSearch.value, linkSaved)
-              btnShowMore.addEventListener('click', () => {
-                newsCardList.showMore(res.articles, inputSearch.value)
-              })
-        })
-      } else {
-        errorSearch.textContent = 'Нужно ввести ключевое слово'
+    if (inputSearch.value.length > 0) {
+      preloader.classList.remove('disabled')
+      errorSearch.textContent = ''
+      news.getNews(inputSearch.value, time)
+      .then((res) => {
+      if (res.articles.length > 3) {
+        btnShowMore.classList.remove('disabled')
       }
-  })
+      resultBlock.classList.remove('disabled')
+      preloader.classList.add('disabled')
+        if (res.articles.length === 0) {
+          resultBlock.classList.add('disabled')
+          noResult.classList.remove('disabled')
+        }
+          newsCardList.setMainApi(main)
+          newsCardList.addCore(res.articles, inputSearch.value, linkSaved)
+          btnShowMore.addEventListener('click', () => {
+            newsCardList.showMore(res.articles, inputSearch.value)
+          })
+    })
+  } else {
+    errorSearch.textContent = 'Нужно ввести ключевое слово'
+  }
 })
 
 main.getUser()
 .then((res) => {
-  if (res === 401) {
+  if (res.data != undefined ) {
+    btnMenuSignIn.classList.remove('disabled')
+    savedMenu.classList.remove('disabled')
+    btnAuthorization.classList.add('disabled')
+    const name = localStorage.getItem('name')
+    nameUser.textContent = name;
+  } else {
     btnAuthorization.classList.remove('disabled')
     btnMenuSignIn.classList.add('disabled')
     savedMenu.classList.add('disabled')
   }
-  if (res === 200) {
-    btnMenuSignIn.classList.remove('disabled')
-    savedMenu.classList.remove('disabled')
-    btnAuthorization.classList.add('disabled')
+})
+.catch((err) => {
+  if (err.message === 'Ошибка: 401') {
+    btnAuthorization.classList.remove('disabled')
+    btnMenuSignIn.classList.add('disabled')
+    savedMenu.classList.add('disabled')
+    // formSignInValidity.removeClassButton()
   }
 })

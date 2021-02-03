@@ -54,17 +54,12 @@ export class NewsCard {
 
   cardDelete(cardDeleteImg, id) {
     cardDeleteImg.addEventListener('click', (event) => {
-      console.log('click')
-      if (event.target.classList.contains('saved-cards__delete-img')) {
-        console.log('click2')
-        console.log(this.savedCardsList)
         this.main.deleteArticle(id)
         .then((res) => {
           if (res.message === 'Карточка удалена!') {
             this.savedCardsList.removeChild(event.target.closest('.saved-cards__container'))
           }
         })
-      }
     })
   }
 
