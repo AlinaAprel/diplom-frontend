@@ -1,0 +1,24 @@
+@import url(/blocks/saved-cards/__author/saved-cards__author.css);
+@import url(/blocks/saved-cards/__container/saved-cards__container.css);
+@import url(/blocks/saved-cards/__list/saved-cards__list.css);
+@import url(/blocks/saved-cards/__header/saved-cards__header.css);
+@import url(/blocks/saved-cards/__image/saved-cards__image.css);
+@import url(/blocks/saved-cards/__text/saved-cards__text.css);
+@import url(/blocks/saved-cards/__time/saved-cards__time.css);
+@import url(/blocks/saved-cards/__theme/saved-cards__theme.css);
+@import url(/blocks/saved-cards/__delete/saved-cards__delete.css);
+@import url(/blocks/saved-cards/__delete-img/saved-cards__delete-img.css);
+@import url(/blocks/saved-cards/__statement/saved-cards__statement.css);
+
+@import url(/blocks/saved-cards/__title/saved-cards__title.css);
+@import url(/blocks/saved-cards/__button/saved-cards__button.css);
+@import url(/blocks/saved-cards/__save-img/saved-cards__save-img.css);
+@import url(/blocks/saved-cards/__save/saved-cards__save.css);
+
+
+.saved-cards {
+  display: flex;
+  flex-direction: column;
+
+  background: #e5e5e5;
+}

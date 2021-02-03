@@ -1,0 +1,31 @@
+.footer__main {
+  position: absolute;
+  top: 30px;
+  right: 408px;
+
+  width: 112px;
+
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .footer__main {
+    top: 21px;
+    right: 312px;
+    width: 88px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .footer__main {
+    top: 25px;
+    left: 16px;
+    text-align: left;
+  }
+}

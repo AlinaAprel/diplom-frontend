@@ -1,0 +1,28 @@
+.result-cards__button {
+  width: 228px;
+  height: 64px;
+
+  margin-top: 64px;
+  margin-bottom: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 10px 20px 10px;
+
+  background: #ffffff;
+  border-radius: 80px;
+  border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #1a1b22;
+
+  cursor: pointer;
+}
+
+.result-cards__button:hover {
+  opacity: 0.9;
+}

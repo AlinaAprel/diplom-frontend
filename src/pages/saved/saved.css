@@ -1,0 +1,21 @@
+@import url(/vendor/normalize.css);
+@import url(/vendor/fonts.css);
+@import url(/blocks/header/header.css);
+@import url(/blocks/search/search.css);
+@import url(/blocks/preloader/preloader.css);
+@import url(/blocks/result/result.css);
+@import url(/blocks/author/author.css);
+@import url(/blocks/footer/footer.css);
+
+@import url(/blocks/results/results.css);
+@import url(/blocks/saved-cards/saved-cards.css);
+@import url(/blocks/result-cards/result-cards.css);
+
+@import url(/blocks/popup/popup.css);
+@import url(/blocks/signup/signup.css);
+
+@import url(/blocks/header-mobile/header-mobile.css);
+
+.disabled {
+  display: none;
+}

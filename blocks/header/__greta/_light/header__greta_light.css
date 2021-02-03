@@ -1,0 +1,26 @@
+/* Класс для меню на странице "Сохраненные фотографии" */
+.header__greta_light {
+    display: flex;
+    flex-direction: row;
+
+    width: 112px;
+    height: 48px;
+    margin: 19px 104px 13px 32px;
+
+    border: 1px solid #1a1b22;
+    box-sizing: border-box;
+    border-radius: 100px;
+
+    cursor: pointer;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header__greta_light {
+    font-size: 16px;
+    line-height: 24px;
+
+    margin: 18px 20px 8px 15px;
+    width: 100px;
+    height: 40px;
+  }
+}

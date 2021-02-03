@@ -1,0 +1,64 @@
+@import url(/blocks/header/__autorization/header__autorization.css);
+@import url(/blocks/header/__explorer/header__explorer.css);
+@import url(/blocks/header/__main/header__main.css);
+@import url(/blocks/header/__rectangle/header__rectangle.css);
+@import url(/blocks/header/__nav/header__nav.css);
+@import url(/blocks/header/__saved/header__saved.css);
+@import url(/blocks/header/__greta-img/header__greta-img.css);
+@import url(/blocks/header/__greta-img/_light/header__greta-img_light.css);
+@import url(/blocks/header/__greta-link/header__greta-link.css);
+@import url(/blocks/header/__greta/header__greta.css);
+@import url(/blocks/header/__greta/_light/header__greta_light.css);
+@import url(/blocks/header/__theme-text/_dark/header__theme-text_dark.css);
+@import url(/blocks/header/__theme-text/_light/header__theme-text_light.css);
+@import url(/blocks/header/__active/header__active.css);
+@import url(/blocks/header/__active/_dark/header__active_dark.css);
+@import url(/blocks/header/__active/_light/header__active_light.css);
+
+@import url(/blocks/header/__mobile/header__mobile.css);
+
+
+.header {
+  width: 100%;
+  height: 80px;
+
+  background: rgba(196, 196, 196, 0.01);
+  box-shadow: inset 0px -1px 0px #D1D2D6;
+
+  display: none;
+  justify-content: space-between;
+}
+
+.header-dark {
+  max-width: 100%;
+  height: 80px;
+
+  background: #1A1B22;
+  box-shadow: inset 0px -1px 0px #D1D2D6;
+
+  display: none;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    height: 66px;
+  }
+
+  .header-dark {
+    height: 66px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+  }
+
+  .header-dark {
+    display: flex;
+  }
+}
+
+
+

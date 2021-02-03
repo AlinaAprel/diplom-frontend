@@ -1,0 +1,19 @@
+.result-cards__delete-img {
+  width: 24px;
+  height: 24px;
+
+  background-image: url('../../../images/trash.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+}
+
+.result-cards__delete-img:hover {
+  width: 24px;
+  height: 24px;
+
+  background-image: url('../../../images/trash-dark.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 100;
+}

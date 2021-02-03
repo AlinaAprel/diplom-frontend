@@ -1,0 +1,34 @@
+.saved-cards__title {
+  width: 712px;
+  margin: 80px 0px 0px 106px;
+
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+
+  color: #1a1b22;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .saved-cards__title {
+    width: 336px;
+    margin: 40px 0px 0px 40px;
+
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .saved-cards__title {
+    width: 224px;
+    margin: 32px 0px 0px 16px;
+
+    font-size: 30px;
+    line-height: 34px;
+
+
+  }
+}

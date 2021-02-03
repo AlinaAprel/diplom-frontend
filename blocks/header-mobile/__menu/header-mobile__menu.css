@@ -1,0 +1,6 @@
+.header-mobile__menu {
+  display: flex;
+  flex-direction: column;
+
+  background: #1a1b22;
+}

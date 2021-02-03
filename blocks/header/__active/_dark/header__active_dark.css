@@ -1,0 +1,6 @@
+/* Полоска под ссылками - темная */
+.header__active_dark {
+  border-bottom: 3px solid #ffffff;
+  padding-bottom: 47px;
+  margin-right: 0px;
+}

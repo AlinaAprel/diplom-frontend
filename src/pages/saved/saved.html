@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="Alina Aprel">
+    <title>NewsExplorer</title>
+    <link rel="icon" type="image/x-icon" href="<%=('../images/favicon.svg')%>">
+    <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.saved.css %>">
+  </head>
+<body>
+
+  <!-- Для того, чтобы скрыть какой-либо блок - поставьте класс disabled -->
+
+    <!-- Без класса disabled меню исчезает, если ширина меньше 768px -->
+ <header class="header">
+    <p class="header__explorer header__theme-text_light">NewsExplorer</p>
+      <nav class="header__nav">
+            <a class="header__main header__theme-text_light" type="text/css" href="index.html">Главная</a>
+            <a class="header__saved header__active_light header__theme-text_light">Сохранённые статьи</a>
+          <div class="header__greta header__greta_light">
+            <a class="header__greta-link header__theme-text_light">Грета</a>
+              <img class="header__greta-img header__greta-img_light" alt="Вход" src="<%=('../images/greta-dark.svg')%>">
+          </div>
+      </nav>
+  </header>
+
+  <!-- Без класса disabled меню исчезает, если ширина меньше 768px -->
+  <header class="header-dark disabled">
+    <p class="header__explorer header__theme-text_dark">NewsExplorer</p>
+      <nav class="header__nav">
+            <a class="header__main header__theme-text_dark header__active_dark" type="text/css" href="index.html">Главная</a>
+          <div class="header__rectangle header__theme-text_dark">
+            <a class="header__autorization" href="#">Авторизоваться</a>
+          </div>
+      </nav>
+  </header>
+
+      <!-- Для того чтобы увидеть меню header-mobile - уберите класс disabled -->
+    <!-- Без класса disabled меню появляется на ширине 320px и исчезает на 768px  -->
+  <header class="header-mobile disabled">
+    <div class="header-mobile__container">
+      <div class="header-mobile__top">
+        <p class="header-mobile__explorer">NewsExplorer</p>
+        <img class="header-mobile__image" alt="Закрыть" src="../images/close.svg">
+      </div>
+      <div class="header-mobile__menu">
+        <a class="header-mobile__main">Главная</a>
+        <a class="header-mobile__saved">Сохраненные статьи</a>
+        <div class="header-mobile__authorization">
+          <a class="header-mobile__authorization-link">Авторизоваться</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="results">
+    <p class="results__text">Сохранённые статьи</p>
+    <h1 class="results__header"><span id="name">Грета</span>, у вас <span id="number">0</span> сохранённых статей</h1>
+    <p class="results__theme">
+      <span class="results__span"></span>
+       <span class="results__span"></span>
+    </p>
+  </div>
+
+  <div class="saved-cards">
+    <div class="saved-cards__list">
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p class="footer__text">© 2020 Supersite, Powered by News API</p>
+      <a class="footer__main">Главная</a>
+        <a class="footer__yandex">Яндекс.Практикум</a>
+          <a class="footer__github">
+            <img class="footer__github-image" alt="Github" src="<%=('../images/github.svg')%>">
+          </a>
+        <a class="footer__facebook">
+          <img class="footer__facebook-image" alt="Facebook" src="<%=('../images/facebook.svg')%>">
+        </a>
+  </footer>
+</body>
+<script  type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks.saved.js %>"></script>
+</html>

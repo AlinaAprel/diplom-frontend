@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="">
+  <meta name="author" content="Alina Aprel">
+  <title>NewsExplorer</title>
+  <link rel="icon" type="image/x-icon" href="<%=('../images/favicon.svg')%>">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.index.css %>">
+</head>
+<body>
+  <!-- Для того, чтобы скрыть какой-либо блок - нужно поставить класс disabled -->
+
+  <!-- Без класса disabled меню исчезает, если ширина меньше 768px -->
+    <header class="header">
+        <p class="header__explorer">NewsExplorer</p>
+          <nav class="header__nav">
+                <p class="header__main header__active">Главная</p>
+                <!-- Чтобы скрыть поле "Сохраненные статьи" - поставьте класс disabled -->
+                <a class="header__saved" href="saved.html" id="link-saved">Сохранённые статьи</a>
+                <!-- Чтобы скрыть поле "Авторизоваться" - поставьте класс disabled -->
+              <div class="header__rectangle">
+                <a class="header__autorization" href="#">Авторизоваться</a>
+              </div>
+              <!-- Чтобы скрыть поле "Грета" - поставьте класс disabled -->
+              <div class="header__greta disabled">
+                <a class="header__greta-link">Грета</a>
+                  <img class="header__greta-img" alt="Вход" src="<%=('../images/logout.svg')%>">
+              </div>
+          </nav>
+    </header>
+
+  <!-- Для того, чтобы увидеть меню для телефона - нужно убрать класс disabled -->
+    <header class="header disabled">
+      <p class="header__explorer">NewsExplorer</p>
+        <nav class="header__nav">
+            <img class="header__mobile" alt="Меню" src="../images/menu.svg">
+        </nav>
+    </header>
+
+    <!-- Для того чтобы увидеть меню header-mobile - уберите класс disabled -->
+    <!-- Без класса disabled меню появляется на ширине 320px и исчезает на 768px  -->
+    <header class="header-mobile disabled">
+      <div class="header-mobile__container">
+        <div class="header-mobile__top">
+          <p class="header-mobile__explorer">NewsExplorer</p>
+          <img class="header-mobile__image" alt="Закрыть" src="../images/close.svg">
+        </div>
+        <div class="header-mobile__menu">
+          <a class="header-mobile__main">Главная</a>
+          <a class="header-mobile__saved" id="link-saved">Сохраненные статьи</a>
+          <div class="header-mobile__authorization">
+            <a class="header-mobile__authorization-link">Авторизоваться</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="search">
+      <img class="search__image" src="<%=('../images/georgia-de-lotz--UsJoNxLaNo-unsplash.png')%>" alt="Телефон">
+      <h1 class="search__text">Что творится в мире?</h1>
+      <p class="search__paragraph">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</p>
+      <form class="search__form">
+        <input class="search__input-text" type="text" placeholder="Введите тему новости" required>
+        <!-- Кнопка сама исчезает на ширине меньше 768px -->
+        <button class="search__input-button" type="button">Искать</button>
+      </form>
+      <!-- Кнопка сама исчезает на ширине больше 767px -->
+      <button class="search__button" type="button">Искать</button>
+      <p class="search__error"></p>
+    </div>
+
+
+    <div class="result-cards disabled">
+      <h3 class="result-cards__title">Результаты поиска</h3>
+      <div class="result-cards__list">
+        <!-- Начало примера верстки карточки -->
+
+        <!-- Конец примера верстки карточки -->
+      </div>
+      <button class="result-cards__button">Показать еще</button>
+    </div>
+
+    <!-- Для того, чтобы убрать блок "preloader" - поставьте класс disabled -->
+    <div class="preloader disabled">
+        <i class="preloader__circle"></i>
+        <p class="preloader__text">Идет поиск новостей...</p>
+    </div>
+
+    <!-- Для того, чтобы убрать блок "result" - поставьте класс disabled -->
+    <div class="result disabled">
+      <img class="result__image" alt="Лупа" src="<%=('../images/not-found.svg')%>">
+      <h2 class="result__header">Ничего не найдено</h2>
+      <p class="result_text">К сожалению по вашему запросу
+        ничего не найдено.</p>
+      </div>
+
+    <div class="author">
+      <img class="author__avatar" alt="Фотография автора" src="<%=('../images/author-photo.png')%>">
+        <div class="author__text">
+          <h2 class="author__header">Об авторе</h2>
+          <p class="author__paragraph"> Это блок с описанием автора проекта. Здесь следует указать, как вас зовут,
+          чем вы занимаетесь, какими технологиями разработки владеете.</p>
+          <p class="author__paragraph">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились,
+          и чем можете помочь потенциальным заказчикам.</p>
+          </div>
+      </div>
+
+    <footer class="footer">
+      <p class="footer__text">© 2020 Supersite, Powered by News API</p>
+        <a class="footer__main">Главная</a>
+          <a class="footer__yandex">Яндекс.Практикум</a>
+            <a class="footer__github">
+              <img class="footer__github-image" alt="Github" src="<%=('../images/github.svg')%>">
+            </a>
+          <a class="footer__facebook">
+            <img class="footer__facebook-image" alt="Facebook" src="<%=('../images/facebook.svg')%>">
+          </a>
+    </footer>
+
+    <div class="popup popup_is-opened disabled" id="popup-signin">
+      <div class="popup__content">
+        <img src="<%=('../images/close.svg')%>" alt="" id="close-signin" class="popup__close">
+          <h3 class="popup__title">Вход</h3>
+            <form class="popup__form" name="log" id="input-signin">
+              <p class="popup__text-email">Email</p>
+                <input type="email" name="email" id="signin-input-email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <p class="popup__error_log" id="signin-input-email__error"></p>
+                  <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
+                   <p class="popup__text-parol">Пароль</p>
+                <input type="password" name="parol" id="signin-input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <p class="popup__error_log" id="signin-input-parol__error"></p>
+                <p class="popup__error_signin"></p>
+                <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
+              <button class="popup__button" id="button-signin">Войти</button>
+                <p class="popup__paragraph">или
+                  <a class="popup__link" id="link-for-signup">Зарегистрироваться</a>
+                </p>
+            </form>
+      </div>
+    </div>
+
+    <div class="popup popup_is-opened disabled" id="popup-signup">
+      <div class="popup__content">
+        <img src="<%=('../images/close.svg')%>" alt="" class="popup__close" id="close-signup">
+          <h3 class="popup__title">Регистрация</h3>
+            <form class="popup__form" name="signup" id="signup-form">
+              <p class="popup__text-email">Email</p>
+                <input type="email" name="email" id="signup-input-email" class="popup__input popup__input_type_email" placeholder="Введите почту" required>
+                <p class="popup__error_log" id="signup-input-email__error"></p>
+                  <p class="popup__text-parol">Пароль</p>
+                <input type="password" name="parol" id="signup-input-parol" class="popup__input popup__input_type_parol" placeholder="Введите ссылку" required>
+                <p class="popup__error_log" id="signup-input-parol__error"></p>
+                <p class="popup__text-name">Имя</p>
+                <input type="text" name="name" id="signup-input-name" class="popup__input popup__input_type_name" placeholder="Введите своё имя" required>
+                <p class="popup__error_log" id="signup-input-name__error"></p>
+                <p class="popup__error_signup"></p>
+                <!-- Для того, чтобы сделать кнопку активной - поставьте класс popup__button_active -->
+                <!-- Если шаблон с ошибкой - нужно поставить класс margin-null -->
+              <button class="popup__button margin-null" id="button-signup">Зарегистрироваться</button>
+                <p class="popup__paragraph">или
+                  <a class="popup__link" id="link-for-signin">Войти</a>
+                </p>
+            </form>
+      </div>
+    </div>
+
+   <!-- Для того, чтобы увидеть блок "signup" - уберите класс disabled -->
+    <div class="signup popup_is-opened disabled">
+      <div class="signup__container">
+        <img class="signup__close" alt="" src="<%=('../images/close.svg')%>">
+        <h4 class="signup__header">Пользователь успешно зарегистрирован!</h4>
+        <a class="signup__log" id="link-for-login">Войти</a>
+      </div>
+    </div>
+</body>
+<script  type="text/javascript" src="<%=htmlWebpackPlugin.files.chunks.index.js %>"></script>
+</html>
